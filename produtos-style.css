@@ -1,0 +1,76 @@
+/* =========================
+   PRODUTOS – ESTILO ESPECÍFICO
+   ========================= */
+
+/* Grid de produtos */
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+/* Card do produto */
+.produto {
+  background: #111;
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Título do card */
+.produto h3 {
+  color: #d4af37;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* Texto do card */
+.produto p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Hover elegante */
+.produto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   RESPONSIVO
+   ========================= */
+@media (max-width: 768px) {
+  .produto {
+    padding: 24px 20px;
+  }
+
+  .produto h3 {
+    font-size: 1.1rem;
+  }
+
+  .produto p {
+    font-size: 0.9rem;
+  }
+}
+
+.btn-cotar {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: #d4af37; /* dourado */
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-cotar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(212,175,55,0.35);
+}
