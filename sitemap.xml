@@ -8,7 +8,13 @@
 
   <url>
     <loc>https://novo-sol-colchoes.github.io/Site/contato.html</loc>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Quando criar produtos.html -->
+  <url>
+    <loc>https://novo-sol-colchoes.github.io/Site/produtos.html</loc>
+    <priority>0.9</priority>
   </url>
 
 </urlset>
