@@ -1,119 +1,207 @@
-/* HERO DE PÁGINA INTERNA */
-.page-hero{
-  min-height: calc(55vh - var(--header-h));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+/* =============================================================================
+   CONTATO – ESTILO ESPECÍFICO (contato-style.css)
+   -----------------------------------------------------------------------------
+   Objetivo:
+   - Estilos exclusivos da página contato.html
+   - Complementa o style.css (global), sem mexer nas outras páginas
 
+   Guia rápido de cores usadas aqui:
+   - Dourado (destaque): #d4af37  → títulos, identidade
+   - Fundo escuro: #1a1a1a / #0f0f0f
+   - Bordas: #2a2a2a (bem discreta)
+   - Texto claro: #e6e6e6 / #ddd / #ccc
+
+   Onde você mais vai mexer (se quiser mudar “a cara” da página):
+   1) Fundo da capa: url("background-contato.png")
+   2) Intensidade do escurecimento: rgba(0,0,0,0.65)
+   3) Cor de destaque: #d4af37
+   ============================================================================ */
+
+
+/* =============================================================================
+   HERO DE PÁGINA INTERNA (CAPA DO CONTATO)
+   -----------------------------------------------------------------------------
+   - Área visual no topo (antes do conteúdo)
+   - Fica “acima da dobra” em muitas telas
+   - Tem imagem de fundo + camada escura por cima para leitura
+   ============================================================================ */
+.page-hero{
+  /* Altura da capa:
+     - 55vh = 55% da altura da tela
+     - - var(--header-h) evita a capa “ficar escondida” atrás do header fixo
+     Obs: var(--header-h) precisa existir no style.css (global) */
+  min-height: calc(55vh - var(--header-h));
+
+  /* Centralização do conteúdo (h1 e p) no meio da capa */
+  display: flex;             /* ativa flexbox */
+  align-items: center;       /* centraliza verticalmente */
+  justify-content: center;   /* centraliza horizontalmente */
+  text-align: center;        /* centraliza o texto */
+
+  /* Fundo com “overlay” (escurecimento) + imagem:
+     - O linear-gradient vem primeiro (fica por cima)
+     - A url(...) fica por baixo (imagem de fundo)
+     Dica: se quiser mais claro, reduza 0.65 para 0.50 (por exemplo) */
   background-image:
     linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
     url("background-contato.png");
-  background-size: cover;
-  background-position: center;
+
+  background-size: cover;     /* preenche a área toda, mesmo que corte um pouco */
+  background-position: center;/* mantém o centro visível (melhor para “capas”) */
   background-repeat: no-repeat;
 
+  /* Espaço interno para não “encostar” em telas menores */
   padding: 60px 20px;
 }
 
+
+/* Conteúdo da capa (limita largura para leitura confortável) */
 .page-hero-content{
-  max-width: 900px;
+  max-width: 900px; /* evita linhas muito longas */
 }
 
+
+/* Título principal da capa */
 .page-hero h1{
-  font-size: 2.6rem;
-  letter-spacing: 1px;
-  color: #d4af37;
-  margin-bottom: 14px;
+  font-size: 2.6rem;    /* tamanho grande para título (desktop) */
+  letter-spacing: 1px;  /* leve espaçamento para dar “ar premium” */
+  color: #d4af37;       /* dourado da identidade visual */
+  margin-bottom: 14px;  /* respiro entre título e descrição */
 }
 
+
+/* Texto/descrição da capa */
 .page-hero p{
-  font-size: 1.15rem;
-  color: #e6e6e6;
-  margin-bottom: 22px;
-  line-height: 1.6;
+  font-size: 1.15rem;   /* texto um pouco maior (frase de impacto) */
+  color: #e6e6e6;       /* cinza claro (melhor que branco puro) */
+  margin-bottom: 22px;  /* respiro antes do próximo conteúdo */
+  line-height: 1.6;     /* melhora leitura */
 }
 
-/* GRID DE CONTATO */
+
+/* =============================================================================
+   GRID DE CONTATO (CARDS)
+   -----------------------------------------------------------------------------
+   - Organiza WhatsApp / Telefone / E-mail em colunas
+   - No desktop: 3 colunas
+   - No mobile: vira 1 coluna (ver media query)
+   ============================================================================ */
 .contact-grid{
-  display: grid;
+  display: grid; /* ativa layout em grade */
+
+  /* 3 colunas fixas iguais:
+     - ótimo quando sempre teremos 3 cards
+     - no responsivo, isso muda para 1 coluna */
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 26px;
+
+  gap: 18px;        /* espaçamento entre cards */
+  margin-top: 26px; /* respiro acima dos cards */
 }
 
+
+/* Card individual do contato */
 .contact-card{
-  background: #1a1a1a;
-  border: 1px solid #2a2a2a;
-  border-radius: 14px;
-  padding: 22px;
-  text-align: center;
+  background: #1a1a1a;  /* fundo do card (cinza escuro) */
+  border: 1px solid #2a2a2a; /* borda discreta para separar do fundo */
+  border-radius: 14px; /* arredondado moderno */
+  padding: 22px;       /* espaçamento interno */
+  text-align: center;  /* centraliza texto e botão */
 }
 
+
+/* Título do card (WhatsApp / Telefone / E-mail) */
 .contact-card h3{
-  color: #d4af37;
-  margin-bottom: 10px;
+  color: #d4af37;      /* cor de destaque */
+  margin-bottom: 10px; /* respiro do texto */
 }
 
+
+/* Texto descritivo do card */
 .contact-card p{
-  color: #ccc;
-  margin-bottom: 14px;
+  color: #ccc;         /* cinza claro para leitura */
+  margin-bottom: 14px; /* espaço antes do botão */
   line-height: 1.5;
 }
 
-/* Botão menor para cards */
+
+/* =============================================================================
+   BOTÃO MENOR PARA CARDS
+   -----------------------------------------------------------------------------
+   - Usa a classe global .btn (do style.css)
+   - Aqui apenas reduz tamanho para caber melhor dentro dos cards
+   ============================================================================ */
 .btn.btn-small{
-  padding: 12px 18px;
-  border-radius: 999px;
-  font-size: 0.95rem;
+  padding: 12px 18px;    /* botão mais compacto */
+  border-radius: 999px;  /* formato “pill” (capsula) */
+  font-size: 0.95rem;    /* fonte um pouco menor */
 }
 
-/* Endereço + mapa */
+
+/* =============================================================================
+   ENDEREÇO + MAPA
+   -----------------------------------------------------------------------------
+   - address-box: bloco com endereço
+   - map-box: container do iframe do Google Maps
+   ============================================================================ */
 .address-box{
-  margin-top: 26px;
-  padding: 20px;
-  border-radius: 14px;
-  background: #1a1a1a;
+  margin-top: 26px;      /* separa do grid */
+  padding: 20px;         /* espaçamento interno */
+  border-radius: 14px;   /* mesmo estilo dos cards */
+  background: #1a1a1a;   /* fundo consistente com os cards */
   border: 1px solid #2a2a2a;
   text-align: center;
 }
 
+
+/* Título do endereço */
 .address-box h3{
   color: #d4af37;
   margin-bottom: 10px;
 }
 
+
+/* Texto do endereço */
 .address-box p{
-  color: #ddd;
+  color: #ddd;      /* um pouco mais claro que #ccc */
   line-height: 1.6;
 }
 
+
+/* Caixa do mapa (moldura) */
 .map-box{
-  margin-top: 18px;
-  border-radius: 14px;
-  overflow: hidden;
+  margin-top: 18px;      /* distância entre endereço e mapa */
+  border-radius: 14px;   /* arredondado */
+  overflow: hidden;      /* garante que o iframe respeite o arredondado */
   border: 1px solid #2a2a2a;
-  background: #0f0f0f;
+  background: #0f0f0f;   /* fundo escuro (caso o iframe carregue lento) */
 }
 
+
+/* Iframe do Google Maps */
 .map-box iframe{
-  width: 100%;
-  height: 360px;
-  border: 0;
-  display: block;
+  width: 100%;      /* ocupa toda a largura do container */
+  height: 360px;    /* altura padrão no desktop */
+  border: 0;        /* remove borda padrão do iframe */
+  display: block;   /* remove “espaços” estranhos de inline iframe */
 }
 
-/* Responsivo */
+
+/* =============================================================================
+   RESPONSIVO (telas menores)
+   -----------------------------------------------------------------------------
+   Ajustes para não quebrar layout em tablet/celular.
+   ============================================================================ */
 @media (max-width: 900px){
   .contact-grid{
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 1 coluna (cards empilhados) */
   }
   .map-box iframe{
-    height: 320px;
+    height: 320px; /* mapa um pouco menor para caber melhor */
   }
 }
 
 @media (max-width: 640px){
-  .page-hero h1{ font-size: 2.1rem; }
-  .page-hero p{ font-size: 1.05rem; }
+  /* Ajuste fino da capa (hero) no celular */
+  .page-hero h1{ font-size: 2.1rem; }  /* reduz título */
+  .page-hero p{ font-size: 1.05rem; }  /* reduz texto */
 }

@@ -1,138 +1,192 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+  <!-- ================================
+    CONFIGURAÇÕES BÁSICAS DO DOCUMENTO
+    (idioma, charset, responsividade)
+  ================================= -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ================================
+    TÍTULO DA PÁGINA (aparece no Google e na aba do navegador)
+  ================================= -->
   <title>Novo Sol Colchões | Conforto, Qualidade e Bem-Estar</title>
 
-  <!-- CSS externo -->
+  <!-- ================================
+    CSS (arquivo principal de estilos do site)
+  ================================= -->
   <link rel="stylesheet" href="style.css">
 
-<meta name="description" content="Novo Sol Colchões em São José dos Pinhais. Colchões de qualidade, conforto e bem-estar para noites de sono mais tranquilas. Fale conosco pelo WhatsApp.">
-<meta name="keywords" content="colchões, colchão casal, colchão solteiro, colchão queen, colchão king, novo sol colchões, colchões São José dos Pinhais">
-<meta name="robots" content="index, follow">
+  <!-- ================================
+    SEO (ajuda o Google a entender e indexar a página)
+  ================================= -->
+  <meta name="description"
+    content="Novo Sol Colchões em São José dos Pinhais. Colchões de qualidade, conforto e bem-estar para noites de sono mais tranquilas. Fale conosco pelo WhatsApp.">
+  <meta name="keywords"
+    content="colchões, colchão casal, colchão solteiro, colchão queen, colchão king, novo sol colchões, colchões São José dos Pinhais">
+  <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://novo-sol-colchoes.github.io/Site/">
+  <!-- Canonical (versão preferencial/oficial da página para evitar duplicidade no Google) -->
+  <link rel="canonical" href="https://novosolcolchoes.com.br/">
 
-<!-- Open Graph / WhatsApp -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Novo Sol Colchões | Conforto e Qualidade para o Seu Sono">
-<meta property="og:description" content="Colchões de qualidade em São José dos Pinhais. Conforto, bem-estar e noites de sono perfeitas.">
-<meta property="og:url" content="https://novo-sol-colchoes.github.io/Site/">
-<meta property="og:image" content="https://novo-sol-colchoes.github.io/Site/logo.png">
-
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="pt_BR">
-
+  <!-- ================================
+    OPEN GRAPH / WHATSAPP
+    (define o “preview bonito” quando alguém compartilha o link)
+  ================================= -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Novo Sol Colchões | Conforto e Qualidade para o Seu Sono">
+  <meta property="og:description"
+    content="Colchões de qualidade em São José dos Pinhais. Conforto, bem-estar e noites de sono perfeitas.">
+  <meta property="og:url" content="https://novosolcolchoes.com.br/">
+  <meta property="og:image" content="https://novosolcolchoes.com.br/logo.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
 </head>
+
 <body>
 
-  <!-- CABEÇALHO FIXO -->
-    <header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html" aria-label="Novo Sol Colchões - Início">
-      <img src="logo.png" alt="Novo Sol Colchões" class="brand-logo" />
-    </a>
+  <!-- ==========================================
+    CABEÇALHO FIXO (menu que fica visível no topo)
+    - Logo + navegação principal
+  =========================================== -->
+  <header class="site-header">
+    <div class="header-inner">
 
-    <nav class="nav" aria-label="Menu principal">
-      <a href="index.html" class="nav-link">Início</a>
-      <a href="produtos.html" class="nav-link">Produtos e Serviços</a>
-      <a href="contato.html" class="nav-link">Contato</a>
-    </nav>
-  </div>
-</header>
+      <!-- Logo (clique leva para a Home) -->
+      <a class="brand" href="index.html" aria-label="Novo Sol Colchões - Início">
+        <img src="logo.png" alt="Novo Sol Colchões" class="brand-logo" />
+      </a>
 
+      <!-- Menu principal -->
+      <nav class="nav" aria-label="Menu principal">
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="produtos.html" class="nav-link">Produtos e Serviços</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+      </nav>
 
-  <!-- HERO -->
+    </div>
+  </header>
+
+  <!-- ==========================================
+    HERO (área visual no topo da página)
+    - Parte “acima da dobra” (visível sem rolar)
+    - Mensagem principal + botão de ação (WhatsApp)
+  =========================================== -->
   <div class="hero">
     <div class="hero-content">
       <h1>Novo Sol Colchões</h1>
       <p>Conforto, qualidade e o colchão ideal para o seu estilo de vida.</p>
-      <a class="btn" href="https://wa.me/5541999064248" target="_blank">
+
+      <!-- CTA (Call To Action) - botão principal -->
+      <a class="btn" href="https://wa.me/5541999064248" target="_blank" rel="noopener">
         Fale no WhatsApp
       </a>
     </div>
   </div>
 
- <!-- SOBRE (Missão / Visão / Valores) -->
-<section class="sobre">
-  <div class="container reveal">
-    <h2>Missão, Visão e Valores</h2>
+  <!-- ==========================================
+    SOBRE / MVV (Missão, Visão e Valores)
+    - Bloco institucional com slider (navegação por setas e dots)
+  =========================================== -->
+  <section class="sobre">
+    <div class="container reveal">
+      <h2>Missão, Visão e Valores</h2>
 
-    <div class="mvv" aria-label="Missão, Visão e Valores">
-      <button class="mvv-btn prev" type="button" aria-label="Anterior">‹</button>
+      <div class="mvv" aria-label="Missão, Visão e Valores">
 
-      <div class="mvv-viewport">
-        <div class="mvv-track">
-          <!-- MISSÃO -->
-          <article class="mvv-slide">
-            <h3>MISSÃO</h3>
-            <p>
-              Proporcionar noites de sono com mais conforto, saúde e bem-estar,
-              cuidando do descanso de cada cliente como se fosse o nosso.
-            </p>
-          </article>
+        <!-- Botão anterior do slider -->
+        <button class="mvv-btn prev" type="button" aria-label="Anterior">‹</button>
 
-          <!-- VISÃO -->
-          <article class="mvv-slide">
-            <h3>VISÃO</h3>
-            <p>
-              Ser reconhecido como referência em conforto e qualidade do setor de colchões,
-              levando mais qualidade de vida para cada lar.
-            </p>
-          </article>
+        <!-- Área visível do slider -->
+        <div class="mvv-viewport">
+          <div class="mvv-track">
 
-          <!-- VALORES -->
-          <article class="mvv-slide">
-            <h3>VALORES</h3>
-            <ul>
-              <li>Compromisso com o bem-estar</li>
-              <li>Atendimento com respeito e empatia</li>
-              <li>Qualidade em cada detalhe</li>
-              <li>Confiança e transparência</li>
-              <li>Inovação com responsabilidade</li>
-            </ul>
-          </article>
+            <!-- Slide: MISSÃO -->
+            <article class="mvv-slide">
+              <h3>MISSÃO</h3>
+              <p>
+                Proporcionar noites de sono com mais conforto, saúde e bem-estar,
+                cuidando do descanso de cada cliente como se fosse o nosso.
+              </p>
+            </article>
+
+            <!-- Slide: VISÃO -->
+            <article class="mvv-slide">
+              <h3>VISÃO</h3>
+              <p>
+                Ser reconhecido como referência em conforto e qualidade do setor de colchões,
+                levando mais qualidade de vida para cada lar.
+              </p>
+            </article>
+
+            <!-- Slide: VALORES -->
+            <article class="mvv-slide">
+              <h3>VALORES</h3>
+              <ul>
+                <li>Compromisso com o bem-estar</li>
+                <li>Atendimento com respeito e empatia</li>
+                <li>Qualidade em cada detalhe</li>
+                <li>Confiança e transparência</li>
+                <li>Inovação com responsabilidade</li>
+              </ul>
+            </article>
+
+          </div>
         </div>
-      </div>
 
-      <button class="mvv-btn next" type="button" aria-label="Próximo">›</button>
+        <!-- Botão próximo do slider -->
+        <button class="mvv-btn next" type="button" aria-label="Próximo">›</button>
 
-      <div class="mvv-dots" aria-label="Navegação do slider">
-        <button class="dot is-active" type="button" aria-label="Ir para Missão"></button>
-        <button class="dot" type="button" aria-label="Ir para Visão"></button>
-        <button class="dot" type="button" aria-label="Ir para Valores"></button>
+        <!-- “Dots” do slider (indica e permite trocar slides) -->
+        <div class="mvv-dots" aria-label="Navegação do slider">
+          <button class="dot is-active" type="button" aria-label="Ir para Missão"></button>
+          <button class="dot" type="button" aria-label="Ir para Visão"></button>
+          <button class="dot" type="button" aria-label="Ir para Valores"></button>
+        </div>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- PRODUTOS -->
+  <!-- ==========================================
+    PRODUTOS (resumo dos principais tipos)
+    - Cards com categorias principais
+  =========================================== -->
   <section>
     <div class="container">
-       <h2 class="reveal">Nossos Produtos</h2>
+      <h2 class="reveal">Nossos Produtos</h2>
 
       <div class="produtos">
+
+        <!-- Card: Solteiro -->
         <div class="produto reveal">
           <h3>Colchão Solteiro</h3>
           <p>Ideal para quartos individuais, com conforto e durabilidade.</p>
         </div>
 
-         <div class="produto reveal" style="transition-delay: 120ms;">
+        <!-- Card: Casal -->
+        <div class="produto reveal" style="transition-delay: 120ms;">
           <h3>Colchão Casal</h3>
           <p>Conforto equilibrado para noites tranquilas a dois.</p>
         </div>
 
+        <!-- Card: Queen/King -->
         <div class="produto reveal" style="transition-delay: 240ms;">
           <h3>Queen / King</h3>
           <p>Mais espaço, sofisticação e máximo conforto.</p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CONTATO -->
+  <!-- ==========================================
+    CONTATO (informações principais + botão WhatsApp)
+    - Endereço, telefone e e-mail
+  =========================================== -->
   <section class="contato">
     <div class="container reveal">
       <h2>Contato</h2>
@@ -142,17 +196,24 @@
 
       <br>
 
-      <a class="btn" href="https://wa.me/5541999064248" target="_blank">
+      <a class="btn" href="https://wa.me/5541999064248" target="_blank" rel="noopener">
         Atendimento via WhatsApp
       </a>
     </div>
   </section>
 
+  <!-- ==========================================
+    RODAPÉ (informações finais e direitos)
+  =========================================== -->
   <footer>
-    © 2026 – Novo Sol Colchões • Todos os direitos reservados
+    © 2026 – Novo Sol Colchões - CNPJ: 51.841.611/0001-01 • Todos os direitos reservados
   </footer>
 
-<script src="script.js"></script>
-
+  <!-- ==========================================
+    JAVASCRIPT (animações/reveal/slider)
+    - Mantido no final para carregar mais rápido
+  =========================================== -->
+  <script src="script.js"></script>
 </body>
+
 </html>

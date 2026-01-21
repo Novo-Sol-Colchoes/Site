@@ -1,48 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+  <!-- ================================
+    CONFIGURAÇÕES BÁSICAS DO DOCUMENTO
+    (idioma, charset, responsividade)
+  ================================= -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ================================
+    TÍTULO DA PÁGINA (aparece no Google e na aba do navegador)
+  ================================= -->
   <title>Contato | Novo Sol Colchões</title>
 
+  <!-- ================================
+    CSS (estilos do site)
+    - style.css: estilos globais (header, botões, fontes, etc.)
+    - contato-style.css: estilos específicos desta página
+  ================================= -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="contato-style.css">
 
-<meta name="description" content="Entre em contato com a Novo Sol Colchões. Atendimento via WhatsApp, telefone ou e-mail. Encontre o colchão ideal para você.">
-<meta name="robots" content="index, follow">
+  <!-- ================================
+    SEO (ajuda o Google a entender e indexar a página)
+  ================================= -->
+  <meta name="description"
+    content="Entre em contato com a Novo Sol Colchões. Atendimento via WhatsApp, telefone ou e-mail. Encontre o colchão ideal para você.">
+  <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://novo-sol-colchoes.github.io/Site/contato.html">
+  <!-- Canonical (versão preferencial/oficial da página para evitar duplicidade no Google) -->
+  <link rel="canonical" href="https://novosolcolchoes.com.br/contato.html">
 
-<!-- Open Graph / WhatsApp -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Contato | Novo Sol Colchões">
-<meta property="og:description" content="Fale com a Novo Sol Colchões via WhatsApp, telefone ou e-mail. Atendimento rápido e personalizado.">
-<meta property="og:url" content="https://novo-sol-colchoes.github.io/Site/contato.html">
-<meta property="og:image" content="https://novo-sol-colchoes.github.io/Site/logo.png">
-
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="pt_BR">
-
+  <!-- ================================
+    OPEN GRAPH / WHATSAPP
+    (define o “preview bonito” quando alguém compartilha o link)
+  ================================= -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contato | Novo Sol Colchões">
+  <meta property="og:description"
+    content="Fale com a Novo Sol Colchões via WhatsApp, telefone ou e-mail. Atendimento rápido e personalizado.">
+  <meta property="og:url" content="https://novosolcolchoes.com.br/contato.html">
+  <meta property="og:image" content="https://novosolcolchoes.com.br/logo.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
 </head>
+
 <body>
 
-  <!-- CABEÇALHO FIXO -->
+  <!-- ==========================================
+    CABEÇALHO FIXO (menu que fica visível no topo)
+    - Logo + navegação principal
+  =========================================== -->
   <header class="site-header">
     <div class="header-inner">
+
+      <!-- Logo (clique leva para a Home) -->
       <a class="brand" href="index.html" aria-label="Novo Sol Colchões - Início">
         <img src="logo.png" alt="Novo Sol Colchões" class="brand-logo" />
       </a>
 
+      <!-- Menu principal -->
       <nav class="nav" aria-label="Menu principal">
         <a href="index.html" class="nav-link">Início</a>
         <a href="produtos.html" class="nav-link">Produtos e Serviços</a>
         <a href="contato.html" class="nav-link">Contato</a>
       </nav>
+
     </div>
   </header>
 
-  <!-- HERO INTERNO (CAPA) -->
+  <!-- ==========================================
+    HERO INTERNO (capa da página)
+    - Título + frase curta
+    - Área visual no topo, antes do conteúdo principal
+  =========================================== -->
   <div class="page-hero">
     <div class="page-hero-content reveal">
       <h1>Contato</h1>
@@ -50,22 +83,33 @@
     </div>
   </div>
 
-  <!-- CONTEÚDO CONTATO -->
+  <!-- ==========================================
+    CONTEÚDO PRINCIPAL (contatos e endereço)
+    - Cards com WhatsApp / Telefone / E-mail
+    - Endereço e mapa incorporado
+  =========================================== -->
   <section class="contato">
     <div class="container">
+
+      <!-- Título do bloco -->
       <h2 class="reveal">Como podemos ajudar?</h2>
 
+      <!-- ================================
+        GRID DE CONTATOS (cards)
+        - Cada card tem um canal de atendimento
+      ================================= -->
       <div class="contact-grid">
-        <!-- Card 1 -->
+
+        <!-- Card: WhatsApp (principal canal de atendimento) -->
         <div class="contact-card reveal">
           <h3>WhatsApp</h3>
           <p>Atendimento rápido pelo WhatsApp.</p>
-          <a class="btn btn-small" href="https://wa.me/5541999064248" target="_blank">
+          <a class="btn btn-small" href="https://wa.me/5541999064248" target="_blank" rel="noopener">
             (41) 99906-4248
           </a>
         </div>
 
-        <!-- Card 2 -->
+        <!-- Card: Telefone (ligação direta) -->
         <div class="contact-card reveal" style="transition-delay:120ms;">
           <h3>Telefone</h3>
           <p>Se preferir, ligue para nós.</p>
@@ -74,7 +118,7 @@
           </a>
         </div>
 
-        <!-- Card 3 -->
+        <!-- Card: E-mail (mensagens e solicitações) -->
         <div class="contact-card reveal" style="transition-delay:240ms;">
           <h3>E-mail</h3>
           <p>Envie sua dúvida ou solicitação.</p>
@@ -82,28 +126,45 @@
             novosolcolchoes@hotmail.com
           </a>
         </div>
+
       </div>
 
+      <!-- ================================
+        ENDEREÇO (informação física do local)
+      ================================= -->
       <div class="address-box reveal">
         <h3>Endereço</h3>
         <p>📍 Rua João Ézio Salazar, 438 – São José dos Pinhais / PR</p>
       </div>
 
+      <!-- ================================
+        MAPA (Google Maps incorporado)
+        - Facilita achar a localização
+      ================================= -->
       <div class="map-box reveal">
         <iframe
           title="Mapa - Novo Sol Colchões"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Rua%20Jo%C3%A3o%20%C3%89zio%20Salazar,%20438,%20S%C3%A3o%20Jos%C3%A9%20dos%20Pinhais%20-%20PR&output=embed">
+          src="https://www.google.com/maps?q=Rua%20Jo%C3%A3o%20%C3%89zio%20Salazar,%20438,%20S%C%C3%A3o%20Jos%C3%A9%20dos%20Pinhais%20-%20PR&output=embed">
         </iframe>
       </div>
+
     </div>
   </section>
 
+  <!-- ==========================================
+    RODAPÉ (informações finais e direitos)
+  =========================================== -->
   <footer>
-    © 2026 – Novo Sol Colchões • Todos os direitos reservados
+    © 2026 – Novo Sol Colchões - CNPJ: 51.841.611/0001-01 • Todos os direitos reservados
   </footer>
 
+  <!-- ==========================================
+    JAVASCRIPT (animações/reveal/slider)
+    - Mantido no final para carregar mais rápido
+  =========================================== -->
   <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,76 +1,174 @@
-/* =========================
-   PRODUTOS – ESTILO ESPECÍFICO
-   ========================= */
+/* =============================================================================
+   PRODUTOS – ESTILO ESPECÍFICO (produtos-style.css)
+   -----------------------------------------------------------------------------
+   Objetivo:
+   - Estilizar a grid e os cards de produtos/serviços da página produtos.html
+   - Complementa o style.css (global), sem sobrescrever o que não for necessário.
 
-/* Grid de produtos */
+   Guia rápido de cores usadas aqui:
+   - Fundo do card: #111 (preto/cinza escuro)
+   - Borda dourada suave: rgba(255, 215, 0, 0.15)
+   - Título dourado: #d4af37 (cor principal / destaque)
+   - Texto claro: #e0e0e0
+   - Botão “Cotar”: fundo #d4af37 e texto #000
+
+   Dica de manutenção (mudança de paleta):
+   - Se quiser trocar o “dourado” do site, procure por:
+     #d4af37  e  rgba(255, 215, 0, ...)
+   ============================================================================ */
+
+
+/* =============================================================================
+   GRID DE PRODUTOS (container que segura os cards)
+   -----------------------------------------------------------------------------
+   A classe .produtos está aplicada no container dos cards.
+   Aqui definimos:
+   - display: grid → organiza os cards em colunas/linhas automáticas
+   - template: colunas responsivas com largura mínima de 260px
+   - gap: espaçamento entre os cards
+   - margin-top: respiro acima da grade
+   ============================================================================ */
 .produtos {
-  display: grid;
+  display: grid; /* ativa layout em grade (mais moderno e responsivo) */
+
+  /* Cria colunas automáticas:
+     - auto-fit: ajusta quantidade de colunas conforme espaço disponível
+     - minmax(260px, 1fr): cada card tem pelo menos 260px; se sobrar espaço, expande */
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
+
+  gap: 24px;        /* espaçamento entre cards (horizontal e vertical) */
+  margin-top: 40px; /* distância entre o título da seção e a grade */
 }
 
-/* Card do produto */
+
+/* =============================================================================
+   CARD DO PRODUTO (bloco visual principal)
+   -----------------------------------------------------------------------------
+   A classe .produto é cada card individual.
+   Aqui definimos:
+   - background e borda → aparência do card
+   - border-radius → cantos arredondados (mais “premium”)
+   - padding → espaçamento interno do card
+   - text-align → centraliza conteúdo
+   - transition → suaviza hover (movimento e sombra)
+   ============================================================================ */
 .produto {
-  background: #111;
+  background: #111; /* cor do fundo do card (escuro) */
+
+  /* Borda discreta dourada:
+     - rgba(...) permite borda transparente e sofisticada
+     - Se quiser borda mais forte, aumente o "0.15" (ex: 0.25) */
   border: 1px solid rgba(255, 215, 0, 0.15);
-  border-radius: 16px;
-  padding: 28px 24px;
-  text-align: center;
+
+  border-radius: 16px; /* arredondamento dos cantos (visual moderno) */
+  padding: 28px 24px;  /* (top/bottom) 28px e (left/right) 24px */
+  text-align: center;  /* centraliza título, texto e botão */
+
+  /* Transições (efeito hover suave):
+     - transform: movimento para cima
+     - box-shadow: sombra mais forte */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Título do card */
+
+/* =============================================================================
+   TÍTULO DO CARD (nome do produto/serviço)
+   -----------------------------------------------------------------------------
+   Aqui está o destaque dourado para o nome do item.
+   ============================================================================ */
 .produto h3 {
-  color: #d4af37;
-  font-size: 1.2rem;
-  margin-bottom: 12px;
-  font-weight: 600;
+  color: #d4af37;      /* dourado principal (cor de destaque da marca) */
+  font-size: 1.2rem;   /* tamanho do título */
+  margin-bottom: 12px; /* espaço entre título e texto */
+  font-weight: 600;    /* semi-bold: destaque sem ficar “pesado” */
 }
 
-/* Texto do card */
+
+/* =============================================================================
+   TEXTO DO CARD (descrição)
+   -----------------------------------------------------------------------------
+   Texto mais claro (não branco puro) para reduzir “cansaTopics” visual.
+   ============================================================================ */
 .produto p {
-  color: #e0e0e0;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  color: #e0e0e0;     /* cinza claro (melhor leitura no fundo escuro) */
+  font-size: 0.95rem; /* tamanho do texto base */
+  line-height: 1.5;   /* altura de linha → melhora legibilidade */
 }
 
-/* Hover elegante */
+
+/* =============================================================================
+   HOVER (efeito ao passar o mouse no card)
+   -----------------------------------------------------------------------------
+   A ideia aqui é dar sensação de “interatividade” e qualidade.
+   ============================================================================ */
 .produto:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px); /* “sobe” levemente ao passar o mouse */
+
+  /* Sombra profunda (efeito premium):
+     - 0 12px 30px → deslocamento + blur
+     - rgba(0,0,0,0.45) → sombra suave e realista */
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
-/* =========================
-   RESPONSIVO
-   ========================= */
+
+/* =============================================================================
+   RESPONSIVO (ajustes em telas menores)
+   -----------------------------------------------------------------------------
+   Abaixo de 768px (celular/tablet), reduzimos:
+   - padding do card
+   - tamanho do título
+   - tamanho do texto
+   ============================================================================ */
 @media (max-width: 768px) {
   .produto {
-    padding: 24px 20px;
+    padding: 24px 20px; /* diminui o respiro interno para caber melhor */
   }
 
   .produto h3 {
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* título um pouco menor no mobile */
   }
 
   .produto p {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* texto menor para não “estourar” o layout */
   }
 }
 
+
+/* =============================================================================
+   BOTÃO “COTAR” (CTA dentro do card)
+   -----------------------------------------------------------------------------
+   Esse botão aparece em alguns cards para levar ao WhatsApp com mensagem pronta.
+   Importante: está separado do .btn do style.css (global), para personalizar
+   especificamente o botão de cotação.
+   ============================================================================ */
 .btn-cotar {
-  display: inline-block;
-  margin-top: 16px;
-  padding: 10px 22px;
+  display: inline-block; /* faz o link se comportar como “botão” */
+  margin-top: 16px;      /* espaço entre o texto do card e o botão */
+  padding: 10px 22px;    /* tamanho do botão (altura e largura visual) */
+
+  /* Botão em formato “pill” (capsula/bolinha) */
   border-radius: 999px;
-  background: #d4af37; /* dourado */
-  color: #000;
-  font-weight: 600;
-  text-decoration: none;
+
+  background: #d4af37; /* dourado (cor principal do site) */
+  color: #000;         /* texto preto → máximo contraste no dourado */
+
+  font-weight: 600;      /* destaque sem exagero */
+  text-decoration: none; /* remove sublinhado do link */
+
+  /* Transição rápida para hover (pequeno movimento + sombra) */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+
+/* =============================================================================
+   HOVER DO BOTÃO “COTAR”
+   -----------------------------------------------------------------------------
+   Pequeno “lift” (sobe) e sombra dourada suave.
+   ============================================================================ */
 .btn-cotar:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px); /* sobe levemente */
+
+  /* Sombra dourada leve:
+     - rgba(212,175,55,0.35) usa a cor do dourado em transparência */
   box-shadow: 0 6px 18px rgba(212,175,55,0.35);
 }
