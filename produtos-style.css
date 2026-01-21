@@ -172,3 +172,97 @@
      - rgba(212,175,55,0.35) usa a cor do dourado em transparência */
   box-shadow: 0 6px 18px rgba(212,175,55,0.35);
 }
+
+/* =========================
+   IMAGENS NOS CARDS (Produtos)
+   - Mantém padrão elegante e responsivo
+   ========================= */
+
+.produto-img-link{
+  display: block;
+  margin: 14px auto 0;
+  text-decoration: none;
+}
+
+.produto-img{
+  width: 100%;
+  max-width: 460px;
+  height: 210px;            /* altura padrão do “retângulo” da imagem */
+  object-fit: cover;        /* corta bonito sem distorcer */
+  border-radius: 14px;
+  border: 1px solid rgba(255, 215, 0, 0.14);
+  background: #0b0b0b;
+  display: block;
+}
+
+/* Hover sutil na imagem */
+.produto-img-link:hover .produto-img{
+  transform: translateY(-2px);
+  transition: transform 180ms ease;
+}
+
+/* =========================
+   LIGHTBOX (Imagem grande)
+   ========================= */
+
+.lightbox{
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+}
+
+.lightbox.is-open{
+  display: block;
+}
+
+.lightbox-backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.78);
+}
+
+.lightbox-content{
+  position: relative;
+  z-index: 2;
+  max-width: min(980px, 92vw);
+  max-height: 86vh;
+  margin: 6vh auto 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(212,175,55,0.18);
+  background: #0b0b0b;
+}
+
+.lightbox-content img{
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 86vh;
+  object-fit: contain;
+}
+
+.lightbox-close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 28px;
+  line-height: 42px;
+}
+.lightbox-close:hover{
+  background: rgba(0,0,0,0.8);
+}
+
+/* Responsivo: deixa a imagem um pouco menor no mobile */
+@media (max-width: 640px){
+  .produto-img{
+    height: 190px;
+  }
+}

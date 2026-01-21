@@ -89,7 +89,12 @@
       <p>Opções para cada necessidade — e ajuda para você escolher o colchão ideal.</p>
 
       <!-- CTA principal (WhatsApp) -->
-      <a class="btn" href="https://wa.me/5541999064248" target="_blank" rel="noopener">
+      <a class="btn"
+         href="https://wa.me/5541999064248"
+         target="_blank"
+         rel="noopener"
+         data-analytics-id="cta_whatsapp_topo"
+         aria-label="Falar no WhatsApp com a Novo Sol Colchões">
         Falar no WhatsApp
       </a>
     </div>
@@ -97,8 +102,9 @@
 
   <!-- ==========================================
     LISTAGEM DE PRODUTOS E SERVIÇOS
-    - Cards com descrição
-    - Botão “Cotar” com mensagem automática
+    - Cards com imagem (quando existir)
+    - Clique na imagem abre a imagem maior (lightbox)
+    - Botão “Ver preço” (CTA no WhatsApp)
   =========================================== -->
   <section>
     <div class="container">
@@ -109,44 +115,115 @@
       <!-- Grid de produtos -->
       <div class="produtos">
 
-        <!-- Produto: Colchão Solteiro -->
+        <!-- Produto: Colchão Solteiro (sem imagem por enquanto) -->
         <div class="produto reveal">
           <h3>Colchão Solteiro</h3>
           <p>Ideal para quartos individuais, com conforto e durabilidade para o dia a dia.</p>
-          <a href="https://wa.me/5541999064248?text=Eu%20vi%20esse%20produto%20Colchao%20Solteiro%20no%20site%20e%20quero%20uma%20cotacao"
-             target="_blank" rel="noopener" class="btn-cotar">Cotar</a>
+
+          <a href="https://wa.me/5541999064248?text=Eu%20vi%20o%20Colch%C3%A3o%20Solteiro%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
+             target="_blank"
+             rel="noopener"
+             class="btn-cotar"
+             data-analytics-id="bt_preco_colchao_solteiro"
+             aria-label="Ver preço do Colchão Solteiro no WhatsApp">
+            Ver preço
+          </a>
         </div>
 
-        <!-- Produto: Colchão Casal -->
+        <!-- Produto: Colchão Casal (com imagem) -->
         <div class="produto reveal" style="transition-delay:120ms;">
           <h3>Colchão Casal</h3>
           <p>Conforto equilibrado e suporte na medida certa para noites tranquilas a dois.</p>
-          <a href="https://wa.me/5541999064248?text=Eu%20vi%20esse%20produto%20Colchao%20Casal%20no%20site%20e%20quero%20uma%20cotacao"
-             target="_blank" rel="noopener" class="btn-cotar">Cotar</a>
+
+          <!-- IMAGEM DO PRODUTO (clique para ampliar) -->
+          <a href="cama-casal.png"
+             class="produto-img-link"
+             data-lightbox="true"
+             data-analytics-id="img_colchao_casal"
+             aria-label="Abrir imagem maior do Colchão Casal">
+            <img src="cama-casal.png"
+                 alt="Colchão casal Novo Sol em ambiente de quarto"
+                 class="produto-img"
+                 loading="lazy">
+          </a>
+
+          <a href="https://wa.me/5541999064248?text=Eu%20vi%20o%20Colch%C3%A3o%20Casal%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
+             target="_blank"
+             rel="noopener"
+             class="btn-cotar"
+             data-analytics-id="bt_preco_colchao_casal"
+             aria-label="Ver preço do Colchão Casal no WhatsApp">
+            Ver preço
+          </a>
         </div>
 
-        <!-- Produto: Colchão Queen / King -->
+        <!-- Produto: Colchão Queen / King (sem imagem por enquanto) -->
         <div class="produto reveal" style="transition-delay:240ms;">
           <h3>Queen / King</h3>
           <p>Mais espaço e sofisticação para quem busca máximo conforto e bem-estar.</p>
-          <a href="https://wa.me/5541999064248?text=Eu%20vi%20esse%20produto%20Colchao%20Queen%20King%20no%20site%20e%20quero%20uma%20cotacao"
-             target="_blank" rel="noopener" class="btn-cotar">Cotar</a>
+
+          <a href="https://wa.me/5541999064248?text=Eu%20vi%20o%20Colch%C3%A3o%20Queen%20ou%20King%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
+             target="_blank"
+             rel="noopener"
+             class="btn-cotar"
+             data-analytics-id="bt_preco_colchao_queen_king"
+             aria-label="Ver preço do Colchão Queen ou King no WhatsApp">
+            Ver preço
+          </a>
         </div>
 
-        <!-- Produto: Cabeceira de Cama -->
+        <!-- Produto: Cabeceira de Cama (com imagem) -->
         <div class="produto reveal" style="transition-delay:360ms;">
           <h3>Cabeceira de Cama</h3>
           <p>Modelos que complementam o ambiente, trazendo conforto, estilo e acabamento.</p>
-          <a href="https://wa.me/5541999064248?text=Eu%20vi%20esse%20produto%20Cabeceira%20de%20Cama%20no%20site%20e%20quero%20uma%20cotacao"
-             target="_blank" rel="noopener" class="btn-cotar">Cotar</a>
+
+          <!-- IMAGEM DO PRODUTO (clique para ampliar) -->
+          <a href="cabeceira.png"
+             class="produto-img-link"
+             data-lightbox="true"
+             data-analytics-id="img_cabeceira"
+             aria-label="Abrir imagem maior da Cabeceira de Cama">
+            <img src="cabeceira.png"
+                 alt="Cabeceira estofada em tom azul com detalhes"
+                 class="produto-img"
+                 loading="lazy">
+          </a>
+
+          <a href="https://wa.me/5541999064248?text=Eu%20vi%20a%20Cabeceira%20de%20Cama%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
+             target="_blank"
+             rel="noopener"
+             class="btn-cotar"
+             data-analytics-id="bt_preco_cabeceira"
+             aria-label="Ver preço da Cabeceira de Cama no WhatsApp">
+            Ver preço
+          </a>
         </div>
 
-        <!-- Produto: Cama para Cachorro -->
+        <!-- Produto: Cama para Cachorro (com imagem) -->
         <div class="produto reveal" style="transition-delay:480ms;">
           <h3>Cama para Cachorro</h3>
           <p>Conforto e descanso também para o seu pet, com opções pensadas para bem-estar.</p>
-          <a href="https://wa.me/5541999064248?text=Eu%20vi%20esse%20produto%20Cama%20para%20Cachorro%20no%20site%20e%20quero%20uma%20cotacao"
-             target="_blank" rel="noopener" class="btn-cotar">Cotar</a>
+
+          <!-- IMAGEM DO PRODUTO (clique para ampliar) -->
+          <a href="cama-cachorro.png"
+             class="produto-img-link"
+             data-lightbox="true"
+             data-analytics-id="img_cama_cachorro"
+             aria-label="Abrir imagem maior da Cama para Cachorro">
+            <img src="cama-cachorro.png"
+                 alt="Cachorro deitado em uma cama pet confortável"
+                 class="produto-img"
+                 loading="lazy">
+          </a>
+
+          <a href="https://wa.me/5541999064248?text=Eu%20vi%20a%20Cama%20para%20Cachorro%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
+             target="_blank"
+             rel="noopener"
+             class="btn-cotar"
+             data-analytics-id="bt_preco_cama_cachorro"
+             aria-label="Ver preço da Cama para Cachorro no WhatsApp">
+            Ver preço
+          </a>
         </div>
 
         <!-- Serviço: Orientação -->
@@ -179,7 +256,12 @@
     <div class="container reveal">
       <h2>Quer ajuda para escolher?</h2>
       <p>Fale com a gente e encontre o colchão ideal para o seu estilo de vida.</p>
-      <a class="btn" href="https://wa.me/5541999064248" target="_blank" rel="noopener">
+      <a class="btn"
+         href="https://wa.me/5541999064248"
+         target="_blank"
+         rel="noopener"
+         data-analytics-id="cta_whatsapp_rodape"
+         aria-label="Atendimento via WhatsApp com a Novo Sol Colchões">
         Atendimento via WhatsApp
       </a>
     </div>
@@ -194,10 +276,87 @@
   </footer>
 
   <!-- ==========================================
-    JAVASCRIPT
-    - Animações (reveal, sliders, etc.)
+    LIGHTBOX (imagem grande ao clicar)
   =========================================== -->
-  <script src="script.js"></script>
-</body>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close="true"></div>
 
+    <div class="lightbox-content" role="dialog" aria-modal="true" aria-label="Visualização de imagem">
+      <button class="lightbox-close" type="button" data-lightbox-close="true" aria-label="Fechar imagem">×</button>
+      <img id="lightboxImg" src="" alt="">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    // ================================
+    // LIGHTBOX: abre imagem grande ao clicar
+    // ================================
+    (function () {
+      const lb = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lightboxImg");
+      if (!lb || !lbImg) return;
+
+      function openLightbox(src, alt) {
+        lbImg.src = src;
+        lbImg.alt = alt || "Imagem do produto";
+        lb.classList.add("is-open");
+        lb.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lb.classList.remove("is-open");
+        lb.setAttribute("aria-hidden", "true");
+        lbImg.src = "";
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll('[data-lightbox="true"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          const img = a.querySelector("img");
+          const src = a.getAttribute("href");
+          const alt = img ? img.alt : "";
+          openLightbox(src, alt);
+        });
+      });
+
+      lb.addEventListener("click", (e) => {
+        if (e.target && e.target.getAttribute("data-lightbox-close") === "true") {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && lb.classList.contains("is-open")) closeLightbox();
+      });
+    })();
+
+    // ================================
+    // TRACKING: cliques (GA4) - só dispara se gtag existir
+    // ================================
+    (function () {
+      const trackables = document.querySelectorAll("[data-analytics-id]");
+
+      function sendEvent(id) {
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "click", {
+            event_category: "CTA",
+            event_label: id
+          });
+        }
+      }
+
+      trackables.forEach((el) => {
+        el.addEventListener("click", () => {
+          const id = el.getAttribute("data-analytics-id");
+          if (id) sendEvent(id);
+        });
+      });
+    })();
+  </script>
+
+</body>
 </html>
