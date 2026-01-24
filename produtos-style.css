@@ -1,268 +1,178 @@
 /* =============================================================================
    PRODUTOS – ESTILO ESPECÍFICO (produtos-style.css)
-   -----------------------------------------------------------------------------
-   Objetivo:
-   - Estilizar a grid e os cards de produtos/serviços da página produtos.html
-   - Complementa o style.css (global), sem sobrescrever o que não for necessário.
+============================================================================= */
 
-   Guia rápido de cores usadas aqui:
-   - Fundo do card: #111 (preto/cinza escuro)
-   - Borda dourada suave: rgba(255, 215, 0, 0.15)
-   - Título dourado: #d4af37 (cor principal / destaque)
-   - Texto claro: #e0e0e0
-   - Botão “Cotar”: fundo #d4af37 e texto #000
-
-   Dica de manutenção (mudança de paleta):
-   - Se quiser trocar o “dourado” do site, procure por:
-     #d4af37  e  rgba(255, 215, 0, ...)
-   ============================================================================ */
-
-
-/* =============================================================================
-   GRID DE PRODUTOS (container que segura os cards)
-   -----------------------------------------------------------------------------
-   A classe .produtos está aplicada no container dos cards.
-   Aqui definimos:
-   - display: grid → organiza os cards em colunas/linhas automáticas
-   - template: colunas responsivas com largura mínima de 260px
-   - gap: espaçamento entre os cards
-   - margin-top: respiro acima da grade
-   ============================================================================ */
 .produtos {
-  display: grid; /* ativa layout em grade (mais moderno e responsivo) */
-
-  /* Cria colunas automáticas:
-     - auto-fit: ajusta quantidade de colunas conforme espaço disponível
-     - minmax(260px, 1fr): cada card tem pelo menos 260px; se sobrar espaço, expande */
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-
-  gap: 24px;        /* espaçamento entre cards (horizontal e vertical) */
-  margin-top: 40px; /* distância entre o título da seção e a grade */
+  gap: 24px;
+  margin-top: 40px;
 }
 
-
-/* =============================================================================
-   CARD DO PRODUTO (bloco visual principal)
-   -----------------------------------------------------------------------------
-   A classe .produto é cada card individual.
-   Aqui definimos:
-   - background e borda → aparência do card
-   - border-radius → cantos arredondados (mais “premium”)
-   - padding → espaçamento interno do card
-   - text-align → centraliza conteúdo
-   - transition → suaviza hover (movimento e sombra)
-   ============================================================================ */
 .produto {
-  background: #111; /* cor do fundo do card (escuro) */
-
-  /* Borda discreta dourada:
-     - rgba(...) permite borda transparente e sofisticada
-     - Se quiser borda mais forte, aumente o "0.15" (ex: 0.25) */
+  background: #111;
   border: 1px solid rgba(255, 215, 0, 0.15);
-
-  border-radius: 16px; /* arredondamento dos cantos (visual moderno) */
-  padding: 28px 24px;  /* (top/bottom) 28px e (left/right) 24px */
-  text-align: center;  /* centraliza título, texto e botão */
-
-  /* Transições (efeito hover suave):
-     - transform: movimento para cima
-     - box-shadow: sombra mais forte */
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-/* =============================================================================
-   TÍTULO DO CARD (nome do produto/serviço)
-   -----------------------------------------------------------------------------
-   Aqui está o destaque dourado para o nome do item.
-   ============================================================================ */
-.produto h3 {
-  color: #d4af37;      /* dourado principal (cor de destaque da marca) */
-  font-size: 1.2rem;   /* tamanho do título */
-  margin-bottom: 12px; /* espaço entre título e texto */
-  font-weight: 600;    /* semi-bold: destaque sem ficar “pesado” */
-}
-
-
-/* =============================================================================
-   TEXTO DO CARD (descrição)
-   -----------------------------------------------------------------------------
-   Texto mais claro (não branco puro) para reduzir “cansaTopics” visual.
-   ============================================================================ */
-.produto p {
-  color: #e0e0e0;     /* cinza claro (melhor leitura no fundo escuro) */
-  font-size: 0.95rem; /* tamanho do texto base */
-  line-height: 1.5;   /* altura de linha → melhora legibilidade */
-}
-
-
-/* =============================================================================
-   HOVER (efeito ao passar o mouse no card)
-   -----------------------------------------------------------------------------
-   A ideia aqui é dar sensação de “interatividade” e qualidade.
-   ============================================================================ */
 .produto:hover {
-  transform: translateY(-6px); /* “sobe” levemente ao passar o mouse */
-
-  /* Sombra profunda (efeito premium):
-     - 0 12px 30px → deslocamento + blur
-     - rgba(0,0,0,0.45) → sombra suave e realista */
+  transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
-
-/* =============================================================================
-   RESPONSIVO (ajustes em telas menores)
-   -----------------------------------------------------------------------------
-   Abaixo de 768px (celular/tablet), reduzimos:
-   - padding do card
-   - tamanho do título
-   - tamanho do texto
-   ============================================================================ */
-@media (max-width: 768px) {
-  .produto {
-    padding: 24px 20px; /* diminui o respiro interno para caber melhor */
-  }
-
-  .produto h3 {
-    font-size: 1.1rem; /* título um pouco menor no mobile */
-  }
-
-  .produto p {
-    font-size: 0.9rem; /* texto menor para não “estourar” o layout */
-  }
+.produto h3 {
+  color: #d4af37;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
+.produto p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
 
-/* =============================================================================
-   BOTÃO “COTAR” (CTA dentro do card)
-   -----------------------------------------------------------------------------
-   Esse botão aparece em alguns cards para levar ao WhatsApp com mensagem pronta.
-   Importante: está separado do .btn do style.css (global), para personalizar
-   especificamente o botão de cotação.
-   ============================================================================ */
+/* Botão preço (CTA) */
 .btn-cotar {
-  display: inline-block; /* faz o link se comportar como “botão” */
-  margin-top: 16px;      /* espaço entre o texto do card e o botão */
-  padding: 10px 22px;    /* tamanho do botão (altura e largura visual) */
-
-  /* Botão em formato “pill” (capsula/bolinha) */
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 22px;
   border-radius: 999px;
-
-  background: #d4af37; /* dourado (cor principal do site) */
-  color: #000;         /* texto preto → máximo contraste no dourado */
-
-  font-weight: 600;      /* destaque sem exagero */
-  text-decoration: none; /* remove sublinhado do link */
-
-  /* Transição rápida para hover (pequeno movimento + sombra) */
+  background: #d4af37;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-
-/* =============================================================================
-   HOVER DO BOTÃO “COTAR”
-   -----------------------------------------------------------------------------
-   Pequeno “lift” (sobe) e sombra dourada suave.
-   ============================================================================ */
 .btn-cotar:hover {
-  transform: translateY(-2px); /* sobe levemente */
-
-  /* Sombra dourada leve:
-     - rgba(212,175,55,0.35) usa a cor do dourado em transparência */
-  box-shadow: 0 6px 18px rgba(212,175,55,0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35);
 }
 
-/* =========================
-   IMAGENS NOS CARDS (Produtos)
-   - Mantém padrão elegante e responsivo
-   ========================= */
-
-.produto-img-link{
+/* Imagens nos cards */
+.produto-img-link {
   display: block;
   margin: 14px auto 0;
   text-decoration: none;
 }
-
-.produto-img{
+.produto-img {
   width: 100%;
   max-width: 460px;
-  height: 210px;            /* altura padrão do “retângulo” da imagem */
-  object-fit: cover;        /* corta bonito sem distorcer */
+  height: 210px;
+  object-fit: cover;
   border-radius: 14px;
   border: 1px solid rgba(255, 215, 0, 0.14);
   background: #0b0b0b;
   display: block;
 }
-
-/* Hover sutil na imagem */
-.produto-img-link:hover .produto-img{
+.produto-img-link:hover .produto-img {
   transform: translateY(-2px);
   transition: transform 180ms ease;
 }
 
+/* Links “extras” da galeria (não aparecem no card) */
+.produto-img-link.is-hidden {
+  display: none !important;
+}
+
 /* =========================
    LIGHTBOX (Imagem grande)
-   ========================= */
-
-.lightbox{
+========================= */
+.lightbox {
   position: fixed;
   inset: 0;
   z-index: 99999;
   display: none;
 }
-
-.lightbox.is-open{
+.lightbox.is-open {
   display: block;
 }
 
-.lightbox-backdrop{
+.lightbox-backdrop {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.78);
 }
 
-.lightbox-content{
+.lightbox-content {
   position: relative;
   z-index: 2;
   max-width: min(980px, 92vw);
   max-height: 86vh;
   margin: 6vh auto 0;
+  padding: 16px;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(212,175,55,0.18);
-  background: #0b0b0b;
+  background: rgba(0,0,0,0.92);
 }
 
-.lightbox-content img{
+.lightbox-content img {
   width: 100%;
   height: auto;
   display: block;
-  max-height: 86vh;
+  max-height: 76vh;
   object-fit: contain;
+  border-radius: 12px;
 }
 
-.lightbox-close{
+.lightbox-close {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 12px;
   width: 42px;
   height: 42px;
   border: 0;
   border-radius: 999px;
   cursor: pointer;
-  background: rgba(0,0,0,0.55);
+  background: rgba(255,255,255,0.10);
   color: #fff;
   font-size: 28px;
   line-height: 42px;
 }
-.lightbox-close:hover{
-  background: rgba(0,0,0,0.8);
+.lightbox-close:hover {
+  background: rgba(255,255,255,0.18);
 }
 
-/* Responsivo: deixa a imagem um pouco menor no mobile */
-@media (max-width: 640px){
-  .produto-img{
-    height: 190px;
-  }
+/* Setas */
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.10);
+  color: #fff;
+  font-size: 30px;
+  line-height: 46px;
+  text-align: center;
+}
+.lightbox-prev { left: 10px; }
+.lightbox-next { right: 10px; }
+
+.lightbox-caption {
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.85;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .produto { padding: 24px 20px; }
+  .produto h3 { font-size: 1.1rem; }
+  .produto p { font-size: 0.9rem; }
+}
+@media (max-width: 640px) {
+  .produto-img { height: 190px; }
+  .lightbox-content { margin: 4vh auto 0; }
+  .lightbox-content img { max-height: 72vh; }
 }

@@ -55,12 +55,15 @@
   <header class="site-header">
     <div class="header-inner">
 
-      <!-- Logo (clique leva para a Home) -->
       <a class="brand" href="index.html" aria-label="Novo Sol Colchões - Início">
         <img src="logo.png" alt="Novo Sol Colchões" class="brand-logo" />
       </a>
 
-      <!-- Menu principal -->
+      <!-- BOTÃO MOBILE -->
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        ☰
+      </button>
+
       <nav class="nav" aria-label="Menu principal">
         <a href="index.html" class="nav-link">Início</a>
         <a href="produtos.html" class="nav-link">Produtos e Serviços</a>
@@ -81,7 +84,9 @@
       <p>Conforto, qualidade e o colchão ideal para o seu estilo de vida.</p>
 
       <!-- CTA (Call To Action) - botão principal -->
-      <a class="btn" href="https://wa.me/5541999064248" target="_blank" rel="noopener">
+      <a class="btn"
+        href="https://wa.me/5541999064248?text=Eu%20vi%20seu%20contato%20no%20site%20e%20quero%20saber%20do%20pre%C3%A7o."
+        target="_blank" rel="noopener">
         Fale no WhatsApp
       </a>
     </div>
@@ -140,7 +145,7 @@
         <!-- Botão próximo do slider -->
         <button class="mvv-btn next" type="button" aria-label="Próximo">›</button>
 
-        <!-- “Dots” do slider (indica e permite trocar slides) -->
+        <!-- “Dots” do slider -->
         <div class="mvv-dots" aria-label="Navegação do slider">
           <button class="dot is-active" type="button" aria-label="Ir para Missão"></button>
           <button class="dot" type="button" aria-label="Ir para Visão"></button>
@@ -153,39 +158,92 @@
 
   <!-- ==========================================
     PRODUTOS (resumo dos principais tipos)
-    - Cards com categorias principais
+    - AGORA: apenas a imagem do colchão magnético 01
   =========================================== -->
   <section>
     <div class="container">
-      <h2 class="reveal">Nossos Produtos</h2>
+      <h2 class="reveal">Variedades de Produtos e Serviços de qualidade</h2>
 
-      <div class="produtos">
+      <!-- apenas a imagem (central) -->
+      <div class="produtos" style="grid-template-columns: 1fr; justify-items:center;">
 
-        <!-- Card: Solteiro -->
-        <div class="produto reveal">
-          <h3>Colchão Solteiro</h3>
-          <p>Ideal para quartos individuais, com conforto e durabilidade.</p>
-        </div>
+        <a class="review-img-link"
+          href="#"
+          data-lightbox="true"
+          data-srcbase="colchao-magnetico-01"
+          aria-label="Abrir imagem do Colchão Magnético - foto 01"
+          data-analytics-id="img_colchao_magnetico_01">
 
-        <!-- Card: Casal -->
-        <div class="produto reveal" style="transition-delay: 120ms;">
-          <h3>Colchão Casal</h3>
-          <p>Conforto equilibrado para noites tranquilas a dois.</p>
-        </div>
-
-        <!-- Card: Queen/King -->
-        <div class="produto reveal" style="transition-delay: 240ms;">
-          <h3>Queen / King</h3>
-          <p>Mais espaço, sofisticação e máximo conforto.</p>
-        </div>
+          <img class="review-img"
+            data-srcbase="colchao-magnetico-01"
+            alt="Detalhes do colchão magnético - foto 01"
+            loading="lazy" />
+        </a>
 
       </div>
     </div>
   </section>
 
   <!-- ==========================================
-    CONTATO (informações principais + botão WhatsApp)
-    - Endereço, telefone e e-mail
+    AVALIAÇÕES DO GOOGLE (resumo na Home)
+  =========================================== -->
+  <section class="avaliacoes">
+    <div class="container reveal">
+      <h2>Avaliações no Google</h2>
+
+      <p class="avaliacoes-texto">
+        A confiança dos nossos clientes é o nosso maior compromisso.<br>
+        Confira avaliações reais de quem já comprou com a Novo Sol Colchões.
+      </p>
+
+      <a class="review-img-link"
+        href="reviews-rating.png"
+        data-lightbox="true"
+        aria-label="Abrir imagem maior com a nota da Novo Sol Colchões no Google"
+        data-analytics-id="img_reviews_rating">
+        <img class="review-img"
+          src="reviews-rating.png"
+          alt="Nota 5,0 no Google - Novo Sol Colchões"
+          loading="lazy" />
+      </a>
+
+      <div class="review-grid" aria-label="Avaliações recentes">
+        <a class="review-img-link"
+          href="review-laiana.png"
+          data-lightbox="true"
+          aria-label="Abrir imagem maior da avaliação da Laiana Farias"
+          data-analytics-id="img_review_laiana">
+          <img class="review-img"
+            src="review-laiana.png"
+            alt="Avaliação no Google - Laiana Farias"
+            loading="lazy" />
+        </a>
+
+        <a class="review-img-link"
+          href="review-allan.png"
+          data-lightbox="true"
+          aria-label="Abrir imagem maior da avaliação do Allan Silva"
+          data-analytics-id="img_review_allan">
+          <img class="review-img"
+            src="review-allan.png"
+            alt="Avaliação no Google - Allan Silva"
+            loading="lazy" />
+        </a>
+      </div>
+
+      <a class="btn"
+        href="https://www.google.com/search?sca_esv=38663ec9571eddc2&rlz=1C1GCEA_enBR1154BR1154&sxsrf=ANbL-n4AQfsipv5nAzrlb2X7vABCk8oV2g:1769275297954&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOdpZFsrO8Y9BykUiKa1sCWwZjsDpwEcOibkUpDXDDaCarolClEflP3oRe22_LUeXmb3pXYdTfLucXaWjtMtmyPr7HrpPfmd9z5yIrR_wTRtnXo9FqA%3D%3D&q=Novo+Sol+Colch%C3%B5es+Coment%C3%A1rios&sa=X&ved=2ahUKEwimzpON2KSSAxVJqJUCHWQqC-cQ0bkNegQIMRAH&biw=1536&bih=703&dpr=1.25&aic=0"
+        target="_blank"
+        rel="noopener"
+        aria-label="Avaliar a Novo Sol Colchões no Google"
+        data-analytics-id="cta_avaliar_google_home">
+        Avalie-nos no Google
+      </a>
+    </div>
+  </section>
+
+  <!-- ==========================================
+    CONTATO
   =========================================== -->
   <section class="contato">
     <div class="container reveal">
@@ -196,24 +254,86 @@
 
       <br>
 
-      <a class="btn" href="https://wa.me/5541999064248" target="_blank" rel="noopener">
+      <a class="btn"
+        href="https://wa.me/5541999064248?text=Eu%20vi%20seu%20contato%20no%20site%20e%20quero%20saber%20do%20pre%C3%A7o."
+        target="_blank" rel="noopener">
         Atendimento via WhatsApp
       </a>
     </div>
   </section>
 
   <!-- ==========================================
-    RODAPÉ (informações finais e direitos)
+    RODAPÉ
   =========================================== -->
   <footer>
     © 2026 – Novo Sol Colchões - CNPJ: 51.841.611/0001-01 • Todos os direitos reservados
   </footer>
 
   <!-- ==========================================
-    JAVASCRIPT (animações/reveal/slider)
-    - Mantido no final para carregar mais rápido
+    JAVASCRIPT
   =========================================== -->
   <script src="script.js"></script>
-</body>
 
+  <script>
+    /* =========================================================
+      RESOLVER IMAGEM AUTOMÁTICA POR EXTENSÃO (HOME)
+      - usa data-srcbase="colchao-magnetico-01"
+    ========================================================= */
+    const IMG_EXTS = ["png", "jpg", "jpeg", "webp"];
+    const resolvedCache = new Map();
+
+    function tryLoad(url) {
+      return new Promise((resolve) => {
+        const im = new Image();
+        im.onload = () => resolve(url);
+        im.onerror = () => resolve(null);
+        im.src = url;
+      });
+    }
+
+    async function resolveByBase(base) {
+      if (!base) return null;
+      if (resolvedCache.has(base)) return resolvedCache.get(base);
+
+      const candidates = [];
+      IMG_EXTS.forEach(ext => {
+        candidates.push(`${base}.${ext}`);
+        candidates.push(`./${base}.${ext}`);
+      });
+
+      for (const u of candidates) {
+        const ok = await tryLoad(u);
+        if (ok) {
+          resolvedCache.set(base, ok);
+          return ok;
+        }
+      }
+
+      resolvedCache.set(base, null);
+      return null;
+    }
+
+    // preenche src das imagens da home via data-srcbase
+    (async function fillImages() {
+      const imgs = document.querySelectorAll("img[data-srcbase]");
+      for (const img of imgs) {
+        const base = img.getAttribute("data-srcbase");
+        const url = await resolveByBase(base);
+        if (url) img.src = url;
+      }
+    })();
+
+    // clique abre no lightbox existente (o seu script.js já cuida disso)
+    // se seu script.js não abrir por href="#", garantimos o href real:
+    (async function fixLinks() {
+      const links = document.querySelectorAll('a[data-lightbox="true"][data-srcbase]');
+      for (const a of links) {
+        const base = a.getAttribute("data-srcbase");
+        const url = await resolveByBase(base);
+        if (url) a.setAttribute("href", url);
+      }
+    })();
+  </script>
+
+</body>
 </html>

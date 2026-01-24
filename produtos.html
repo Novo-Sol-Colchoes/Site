@@ -1,83 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <!-- ================================
-    CONFIGURAÇÕES BÁSICAS DO DOCUMENTO
-    (idioma, charset, responsividade)
-  ================================= -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- ================================
-    TÍTULO DA PÁGINA
-    (exibido no Google e na aba do navegador)
-  ================================= -->
   <title>Produtos e Serviços | Novo Sol Colchões</title>
 
-  <!-- ================================
-    CSS
-    - style.css: estilos globais do site
-    - produtos-style.css: estilos específicos desta página
-  ================================= -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="produtos-style.css">
 
-  <!-- ================================
-    SEO (indexação no Google)
-  ================================= -->
   <meta name="description"
-    content="Conheça os produtos e serviços da Novo Sol Colchões em São José dos Pinhais: colchões solteiro, casal, queen e king, cabeceiras e camas para cachorro.">
+        content="Conheça os produtos e serviços da Novo Sol Colchões em São José dos Pinhais: colchões solteiro, casal, queen e king, cabeceiras e camas Pet.">
   <meta name="robots" content="index, follow">
-
-  <!-- Canonical (URL oficial da página para evitar duplicidade de conteúdo) -->
   <link rel="canonical" href="https://novosolcolchoes.com.br/produtos.html">
 
-  <!-- ================================
-    OPEN GRAPH / WHATSAPP
-    (preview ao compartilhar o link)
-  ================================= -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Produtos e Serviços | Novo Sol Colchões">
-  <meta property="og:description"
-    content="Colchões solteiro, casal, queen e king. Atendimento para ajudar você a escolher o colchão ideal.">
+  <meta property="og:description" content="Colchões solteiro, casal, queen e king. Atendimento para ajudar você a escolher o colchão ideal.">
   <meta property="og:url" content="https://novosolcolchoes.com.br/produtos.html">
   <meta property="og:image" content="https://novosolcolchoes.com.br/logo.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   <meta property="og:locale" content="pt_BR">
 </head>
 
 <body>
 
-  <!-- ==========================================
-    CABEÇALHO FIXO
-    - Logo + menu principal
-    - Aparece em todas as páginas do site
-  =========================================== -->
   <header class="site-header">
     <div class="header-inner">
-
-      <!-- Logo (leva para a página inicial) -->
       <a class="brand" href="index.html" aria-label="Novo Sol Colchões - Início">
         <img src="logo.png" alt="Novo Sol Colchões" class="brand-logo" />
       </a>
 
-      <!-- Navegação principal -->
       <nav class="nav" aria-label="Menu principal">
         <a href="index.html" class="nav-link">Início</a>
         <a href="produtos.html" class="nav-link">Produtos e Serviços</a>
         <a href="contato.html" class="nav-link">Contato</a>
       </nav>
-
     </div>
   </header>
 
-  <!-- ==========================================
-    HERO DA PÁGINA
-    - Área visual no topo (acima da “dobra”)
-    - Apresenta o tema da página
-  =========================================== -->
   <section class="hero" style="
     min-height: 55vh;
     background-image:
@@ -85,160 +44,184 @@
       url('background-novo-sol.png');
   ">
     <div class="hero-content">
-      <h1>Produtos e Serviços</h1>
+      <h1>Nossos Produtos</h1>
       <p>Opções para cada necessidade — e ajuda para você escolher o colchão ideal.</p>
 
-      <!-- CTA principal (WhatsApp) -->
       <a class="btn"
          href="https://wa.me/5541999064248"
          target="_blank"
-         rel="noopener"
-         data-analytics-id="cta_whatsapp_topo"
-         aria-label="Falar no WhatsApp com a Novo Sol Colchões">
+         rel="noopener">
         Falar no WhatsApp
       </a>
     </div>
   </section>
 
-  <!-- ==========================================
-    LISTAGEM DE PRODUTOS E SERVIÇOS
-    - Cards com imagem (quando existir)
-    - Clique na imagem abre a imagem maior (lightbox)
-    - Botão “Ver preço” (CTA no WhatsApp)
-  =========================================== -->
   <section>
     <div class="container">
 
-      <!-- Título da seção -->
       <h2 class="reveal">Nossos Produtos</h2>
 
-      <!-- Grid de produtos -->
       <div class="produtos">
 
-        <!-- Produto: Colchão Solteiro (sem imagem por enquanto) -->
+        <!-- 1) Colchão Solteiro (sem foto por enquanto) -->
         <div class="produto reveal">
           <h3>Colchão Solteiro</h3>
           <p>Ideal para quartos individuais, com conforto e durabilidade para o dia a dia.</p>
 
-          <a href="https://wa.me/5541999064248?text=Eu%20vi%20o%20Colch%C3%A3o%20Solteiro%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
-             target="_blank"
-             rel="noopener"
-             class="btn-cotar"
-             data-analytics-id="bt_preco_colchao_solteiro"
-             aria-label="Ver preço do Colchão Solteiro no WhatsApp">
+          <a class="btn-cotar"
+             href="https://wa.me/5541999064248?text=Eu%20vi%20o%20Colch%C3%A3o%20Solteiro%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
+             target="_blank" rel="noopener">
             Ver preço
           </a>
         </div>
 
-        <!-- Produto: Colchão Casal (com imagem) -->
+        <!-- 2) Colchão Casal (galeria: cama-casal-01, cama-casal-02) -->
         <div class="produto reveal" style="transition-delay:120ms;">
           <h3>Colchão Casal</h3>
           <p>Conforto equilibrado e suporte na medida certa para noites tranquilas a dois.</p>
 
-          <!-- IMAGEM DO PRODUTO (clique para ampliar) -->
-          <a href="cama-casal.png"
+          <!-- Imagem principal (abre galeria) -->
+          <a href="#"
              class="produto-img-link"
              data-lightbox="true"
-             data-analytics-id="img_colchao_casal"
-             aria-label="Abrir imagem maior do Colchão Casal">
-            <img src="cama-casal.png"
-                 alt="Colchão casal Novo Sol em ambiente de quarto"
-                 class="produto-img"
+             data-gallery="cama-casal"
+             data-srcbase="cama-casal-01"
+             aria-label="Abrir fotos do Colchão Casal - foto 1">
+            <img class="produto-img"
+                 data-srcbase="cama-casal-01"
+                 alt="Colchão casal Novo Sol - foto 1"
                  loading="lazy">
           </a>
 
-          <a href="https://wa.me/5541999064248?text=Eu%20vi%20o%20Colch%C3%A3o%20Casal%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
-             target="_blank"
-             rel="noopener"
-             class="btn-cotar"
-             data-analytics-id="bt_preco_colchao_casal"
-             aria-label="Ver preço do Colchão Casal no WhatsApp">
+          <!-- Itens extras da mesma galeria (não aparecem no card, só no lightbox) -->
+          <a href="#"
+             class="produto-img-link is-hidden"
+             data-lightbox="true"
+             data-gallery="cama-casal"
+             data-srcbase="cama-casal-02"
+             aria-label="Abrir fotos do Colchão Casal - foto 2">
+            <img data-srcbase="cama-casal-02" alt="Colchão casal Novo Sol - foto 2">
+          </a>
+
+          <a class="btn-cotar"
+             href="https://wa.me/5541999064248?text=Eu%20vi%20o%20Colch%C3%A3o%20Casal%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
+             target="_blank" rel="noopener">
             Ver preço
           </a>
         </div>
 
-        <!-- Produto: Colchão Queen / King (sem imagem por enquanto) -->
+        <!-- 3) Queen / King (galeria: cama-queen-01) -->
         <div class="produto reveal" style="transition-delay:240ms;">
           <h3>Queen / King</h3>
           <p>Mais espaço e sofisticação para quem busca máximo conforto e bem-estar.</p>
 
-          <a href="https://wa.me/5541999064248?text=Eu%20vi%20o%20Colch%C3%A3o%20Queen%20ou%20King%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
-             target="_blank"
-             rel="noopener"
-             class="btn-cotar"
-             data-analytics-id="bt_preco_colchao_queen_king"
-             aria-label="Ver preço do Colchão Queen ou King no WhatsApp">
+          <a href="#"
+             class="produto-img-link"
+             data-lightbox="true"
+             data-gallery="queen-king"
+             data-srcbase="cama-queen-01"
+             aria-label="Abrir foto do Colchão Queen/King - foto 1">
+            <img class="produto-img"
+                 data-srcbase="cama-queen-01"
+                 alt="Colchão Queen/King Novo Sol - foto 1"
+                 loading="lazy">
+          </a>
+
+          <a class="btn-cotar"
+             href="https://wa.me/5541999064248?text=Eu%20vi%20o%20Colch%C3%A3o%20Queen%20ou%20King%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
+             target="_blank" rel="noopener">
             Ver preço
           </a>
         </div>
 
-        <!-- Produto: Cabeceira de Cama (com imagem) -->
+        <!-- 4) Cabeceira (galeria: cabeceira-01, cabeceira-02) -->
         <div class="produto reveal" style="transition-delay:360ms;">
           <h3>Cabeceira de Cama</h3>
           <p>Modelos que complementam o ambiente, trazendo conforto, estilo e acabamento.</p>
 
-          <!-- IMAGEM DO PRODUTO (clique para ampliar) -->
-          <a href="cabeceira.png"
+          <a href="#"
              class="produto-img-link"
              data-lightbox="true"
-             data-analytics-id="img_cabeceira"
-             aria-label="Abrir imagem maior da Cabeceira de Cama">
-            <img src="cabeceira.png"
-                 alt="Cabeceira estofada em tom azul com detalhes"
-                 class="produto-img"
+             data-gallery="cabeceira"
+             data-srcbase="cabeceira-01"
+             aria-label="Abrir fotos de Cabeceira - foto 1">
+            <img class="produto-img"
+                 data-srcbase="cabeceira-01"
+                 alt="Cabeceira Novo Sol - foto 1"
                  loading="lazy">
           </a>
 
-          <a href="https://wa.me/5541999064248?text=Eu%20vi%20a%20Cabeceira%20de%20Cama%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
-             target="_blank"
-             rel="noopener"
-             class="btn-cotar"
-             data-analytics-id="bt_preco_cabeceira"
-             aria-label="Ver preço da Cabeceira de Cama no WhatsApp">
+          <a href="#"
+             class="produto-img-link is-hidden"
+             data-lightbox="true"
+             data-gallery="cabeceira"
+             data-srcbase="cabeceira-02"
+             aria-label="Abrir fotos de Cabeceira - foto 2">
+            <img data-srcbase="cabeceira-02" alt="Cabeceira Novo Sol - foto 2">
+          </a>
+
+          <a class="btn-cotar"
+             href="https://wa.me/5541999064248?text=Eu%20vi%20a%20Cabeceira%20de%20Cama%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
+             target="_blank" rel="noopener">
             Ver preço
           </a>
         </div>
 
-        <!-- Produto: Cama para Cachorro (com imagem) -->
+        <!-- 5) Colchão Magnético (galeria: colchao-magnetico-01) -->
         <div class="produto reveal" style="transition-delay:480ms;">
-          <h3>Cama para Cachorro</h3>
+          <h3>Colchão Magnético</h3>
+          <p>Uma opção especial para quem busca mais conforto e bem-estar no descanso.</p>
+
+          <a href="#"
+             class="produto-img-link"
+             data-lightbox="true"
+             data-gallery="colchao-magnetico"
+             data-srcbase="colchao-magnetico-01"
+             aria-label="Abrir foto do Colchão Magnético - foto 1">
+            <img class="produto-img"
+                 data-srcbase="colchao-magnetico-01"
+                 alt="Colchão Magnético Novo Sol - foto 1"
+                 loading="lazy">
+          </a>
+
+          <a class="btn-cotar"
+             href="https://wa.me/5541999064248?text=Eu%20vi%20o%20Colch%C3%A3o%20Magn%C3%A9tico%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
+             target="_blank" rel="noopener">
+            Ver preço
+          </a>
+        </div>
+
+        <!-- 6) Cama Pet (galeria: cama-pet-01) -->
+        <div class="produto reveal" style="transition-delay:600ms;">
+          <h3>Cama para Pet</h3>
           <p>Conforto e descanso também para o seu pet, com opções pensadas para bem-estar.</p>
 
-          <!-- IMAGEM DO PRODUTO (clique para ampliar) -->
-          <a href="cama-cachorro.png"
+          <a href="#"
              class="produto-img-link"
              data-lightbox="true"
-             data-analytics-id="img_cama_cachorro"
-             aria-label="Abrir imagem maior da Cama para Cachorro">
-            <img src="cama-cachorro.png"
-                 alt="Cachorro deitado em uma cama pet confortável"
-                 class="produto-img"
+             data-gallery="cama-pet"
+             data-srcbase="cama-pet-01"
+             aria-label="Abrir foto da Cama para Pet - foto 1">
+            <img class="produto-img"
+                 data-srcbase="cama-pet-01"
+                 alt="Cama para Pet Novo Sol - foto 1"
                  loading="lazy">
           </a>
 
-          <a href="https://wa.me/5541999064248?text=Eu%20vi%20a%20Cama%20para%20Cachorro%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
-             target="_blank"
-             rel="noopener"
-             class="btn-cotar"
-             data-analytics-id="bt_preco_cama_cachorro"
-             aria-label="Ver preço da Cama para Cachorro no WhatsApp">
+          <a class="btn-cotar"
+             href="https://wa.me/5541999064248?text=Eu%20vi%20a%20Cama%20para%20Pet%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
+             target="_blank" rel="noopener">
             Ver preço
           </a>
         </div>
 
-        <!-- Serviço: Orientação -->
-        <div class="produto reveal" style="transition-delay:600ms;">
+        <!-- 7) Serviço -->
+        <div class="produto reveal" style="transition-delay:720ms;">
           <h3>Orientação na Escolha</h3>
           <p>Atendimento para ajudar você a escolher o colchão ideal conforme seu perfil.</p>
         </div>
 
-        <!-- Serviço: Atendimento -->
-        <div class="produto reveal" style="transition-delay:720ms;">
-          <h3>Atendimento Rápido</h3>
-          <p>Suporte via WhatsApp para tirar dúvidas e agilizar seu atendimento.</p>
-        </div>
-
-        <!-- Serviço: Entrega -->
+        <!-- 8) Serviço -->
         <div class="produto reveal" style="transition-delay:840ms;">
           <h3>Entrega e Suporte</h3>
           <p>Organizamos a melhor forma de entrega para você receber com tranquilidade.</p>
@@ -248,112 +231,209 @@
     </div>
   </section>
 
-  <!-- ==========================================
-    CHAMADA FINAL (CTA)
-    - Reforço para conversão
-  =========================================== -->
   <section class="contato">
     <div class="container reveal">
       <h2>Quer ajuda para escolher?</h2>
       <p>Fale com a gente e encontre o colchão ideal para o seu estilo de vida.</p>
       <a class="btn"
-         href="https://wa.me/5541999064248"
+         href="https://wa.me/5541999064248?text=Eu%20vi%20seu%20contato%20no%20site%20e%20quero%20saber%20do%20pre%C3%A7o."
          target="_blank"
-         rel="noopener"
-         data-analytics-id="cta_whatsapp_rodape"
-         aria-label="Atendimento via WhatsApp com a Novo Sol Colchões">
+         rel="noopener">
         Atendimento via WhatsApp
       </a>
     </div>
   </section>
 
-  <!-- ==========================================
-    RODAPÉ
-    - Informações legais e direitos autorais
-  =========================================== -->
   <footer>
     © 2026 – Novo Sol Colchões - CNPJ: 51.841.611/0001-01 • Todos os direitos reservados
   </footer>
 
-  <!-- ==========================================
-    LIGHTBOX (imagem grande ao clicar)
-  =========================================== -->
+  <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <div class="lightbox-backdrop" data-lightbox-close="true"></div>
 
     <div class="lightbox-content" role="dialog" aria-modal="true" aria-label="Visualização de imagem">
       <button class="lightbox-close" type="button" data-lightbox-close="true" aria-label="Fechar imagem">×</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Imagem anterior">‹</button>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Próxima imagem">›</button>
+
       <img id="lightboxImg" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
     </div>
   </div>
 
   <script src="script.js"></script>
 
   <script>
-    // ================================
-    // LIGHTBOX: abre imagem grande ao clicar
-    // ================================
+    /* =========================================================
+      RESOLVER IMAGEM AUTOMÁTICA POR EXTENSÃO
+      - você passa só "base" (ex: cama-casal-01)
+      - o JS tenta .png, .jpg, .jpeg, .webp
+    ========================================================= */
+    const IMG_EXTS = ["png", "jpg", "jpeg", "webp"];
+    const resolvedCache = new Map();
+
+    function tryLoad(url) {
+      return new Promise((resolve) => {
+        const im = new Image();
+        im.onload = () => resolve(url);
+        im.onerror = () => resolve(null);
+        im.src = url;
+      });
+    }
+
+    async function resolveByBase(base) {
+      if (!base) return null;
+      if (resolvedCache.has(base)) return resolvedCache.get(base);
+
+      // tenta com e sem "./" (ajuda em alguns cenários)
+      const candidates = [];
+      IMG_EXTS.forEach(ext => {
+        candidates.push(`${base}.${ext}`);
+        candidates.push(`./${base}.${ext}`);
+      });
+
+      for (const u of candidates) {
+        const ok = await tryLoad(u);
+        if (ok) {
+          resolvedCache.set(base, ok);
+          return ok;
+        }
+      }
+
+      resolvedCache.set(base, null);
+      return null;
+    }
+
+    /* =========================================================
+      PREENCHE SRC DAS IMAGENS DO CARD AUTOMATICAMENTE
+    ========================================================= */
+    (async function fillCardImages() {
+      const imgs = document.querySelectorAll("img[data-srcbase]");
+      for (const img of imgs) {
+        const base = img.getAttribute("data-srcbase");
+        const url = await resolveByBase(base);
+        if (url) img.src = url;
+      }
+    })();
+
+    /* =========================================================
+      LIGHTBOX + GALERIA (passar imagens)
+      - abre todas da mesma data-gallery
+      - setas e teclado
+    ========================================================= */
     (function () {
       const lb = document.getElementById("lightbox");
       const lbImg = document.getElementById("lightboxImg");
+      const lbCap = document.getElementById("lightboxCaption");
       if (!lb || !lbImg) return;
 
-      function openLightbox(src, alt) {
-        lbImg.src = src;
-        lbImg.alt = alt || "Imagem do produto";
+      const btnPrev = lb.querySelector(".lightbox-prev");
+      const btnNext = lb.querySelector(".lightbox-next");
+
+      let items = [];
+      let currentIndex = 0;
+
+      function setNavVisible() {
+        const show = items.length > 1;
+        btnPrev.style.display = show ? "" : "none";
+        btnNext.style.display = show ? "" : "none";
+      }
+
+      async function render() {
+        const it = items[currentIndex];
+        if (!it) return;
+
+        const url = it.url || (await resolveByBase(it.base));
+        if (url) {
+          lbImg.src = url;
+          lbImg.alt = it.alt || "Imagem do produto";
+          if (lbCap) lbCap.textContent = it.alt || "";
+        } else {
+          lbImg.src = "";
+          lbImg.alt = "Imagem não encontrada";
+          if (lbCap) lbCap.textContent = "Imagem não encontrada";
+        }
+
+        setNavVisible();
+      }
+
+      function openLightbox(list, startIndex) {
+        items = list;
+        currentIndex = startIndex;
+
         lb.classList.add("is-open");
         lb.setAttribute("aria-hidden", "false");
         document.body.style.overflow = "hidden";
+        render();
       }
 
       function closeLightbox() {
         lb.classList.remove("is-open");
         lb.setAttribute("aria-hidden", "true");
         lbImg.src = "";
+        lbImg.alt = "";
+        if (lbCap) lbCap.textContent = "";
         document.body.style.overflow = "";
+        items = [];
+        currentIndex = 0;
       }
 
+      function prev() {
+        if (!items.length) return;
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        render();
+      }
+
+      function next() {
+        if (!items.length) return;
+        currentIndex = (currentIndex + 1) % items.length;
+        render();
+      }
+
+      // clique em qualquer item com data-lightbox
       document.querySelectorAll('[data-lightbox="true"]').forEach((a) => {
-        a.addEventListener("click", (e) => {
+        a.addEventListener("click", async (e) => {
           e.preventDefault();
-          const img = a.querySelector("img");
-          const src = a.getAttribute("href");
-          const alt = img ? img.alt : "";
-          openLightbox(src, alt);
-        });
-      });
 
-      lb.addEventListener("click", (e) => {
-        if (e.target && e.target.getAttribute("data-lightbox-close") === "true") {
-          closeLightbox();
-        }
-      });
+          const gallery = a.getAttribute("data-gallery") || "__single__";
 
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && lb.classList.contains("is-open")) closeLightbox();
-      });
-    })();
+          // pega todos os links da mesma galeria
+          const nodes = Array.from(document.querySelectorAll(
+            `[data-lightbox="true"][data-gallery="${gallery}"]`
+          ));
 
-    // ================================
-    // TRACKING: cliques (GA4) - só dispara se gtag existir
-    // ================================
-    (function () {
-      const trackables = document.querySelectorAll("[data-analytics-id]");
-
-      function sendEvent(id) {
-        if (typeof window.gtag === "function") {
-          window.gtag("event", "click", {
-            event_category: "CTA",
-            event_label: id
+          const list = nodes.map((el) => {
+            const img = el.querySelector("img");
+            return {
+              base: el.getAttribute("data-srcbase") || (img ? img.getAttribute("data-srcbase") : ""),
+              alt: (img && img.alt) ? img.alt : (el.getAttribute("aria-label") || "Imagem do produto"),
+              url: null
+            };
           });
-        }
-      }
 
-      trackables.forEach((el) => {
-        el.addEventListener("click", () => {
-          const id = el.getAttribute("data-analytics-id");
-          if (id) sendEvent(id);
+          // resolve o índice clicado
+          const clickedBase = a.getAttribute("data-srcbase") || (a.querySelector("img")?.getAttribute("data-srcbase") || "");
+          const startIndex = Math.max(0, list.findIndex(x => x.base === clickedBase));
+
+          openLightbox(list, startIndex);
         });
+      });
+
+      // fechar no backdrop / botao
+      lb.addEventListener("click", (e) => {
+        if (e.target && e.target.getAttribute("data-lightbox-close") === "true") closeLightbox();
+      });
+
+      btnPrev?.addEventListener("click", prev);
+      btnNext?.addEventListener("click", next);
+
+      // teclado
+      document.addEventListener("keydown", (e) => {
+        if (!lb.classList.contains("is-open")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") prev();
+        if (e.key === "ArrowRight") next();
       });
     })();
   </script>

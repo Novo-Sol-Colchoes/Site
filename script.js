@@ -156,3 +156,37 @@
   update();
   startAuto();
 })();
+
+(function () {
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav");
+  if (!toggle || !nav) return;
+
+  function openMenu() {
+    nav.classList.add("open");
+    toggle.setAttribute("aria-expanded", "true");
+  }
+
+  function closeMenu() {
+    nav.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+  }
+
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    nav.classList.contains("open") ? closeMenu() : openMenu();
+  });
+
+  // fecha ao clicar fora
+  document.addEventListener("click", () => closeMenu());
+
+  // fecha ao clicar em um link
+  nav.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => closeMenu());
+  });
+
+  // fecha no ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+})();

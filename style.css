@@ -650,3 +650,295 @@ body{
     font-size: 1.05rem;
   }
 }
+/* ==========================================
+  AVALIAÇÕES (Home)
+  - Cole no style.css (ou no final)
+=========================================== */
+.avaliacoes { padding: 56px 0; }
+.avaliacoes h2 { margin-bottom: 8px; }
+.avaliacoes p { margin-bottom: 18px; opacity: .9; }
+
+.review-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+  margin-bottom: 18px;
+}
+
+.review-img-link{
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+  transition: transform .18s ease, border-color .18s ease;
+}
+
+.review-img-link:hover{
+  transform: translateY(-2px);
+  border-color: rgba(248,173,30,.45);
+}
+
+.review-img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 760px){
+  .review-grid{ grid-template-columns: 1fr; }
+}
+
+/* ================================
+   HEADER - GARANTE ALINHAMENTO
+================================ */
+.header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Botão do menu (escondido no desktop) */
+.menu-toggle{
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: #d4af37; /* dourado */
+  padding: 6px 10px;
+}
+
+/* ================================
+   MOBILE: compacta e troca menu por ☰
+================================ */
+@media (max-width: 768px){
+
+  /* deixa o header mais baixo */
+  .site-header{
+    padding: 8px 0;
+  }
+
+  /* garante que logo e ☰ fiquem na mesma linha */
+  .header-inner{
+    position: relative; /* para o menu abrir abaixo */
+    flex-wrap: nowrap;
+  }
+
+  /* esconde menu padrão */
+  .nav{
+    display: none;
+  }
+
+  /* mostra botão ☰ */
+  .menu-toggle{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* quando abrir (classe open via JS) */
+  .nav.open{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(0,0,0,.92);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+    padding: 14px;
+
+    position: absolute;
+    top: 58px;      /* abaixo do header */
+    right: 12px;
+    left: 12px;
+    z-index: 9999;
+  }
+
+  .nav.open .nav-link{
+    padding: 10px 12px;
+    border-radius: 10px;
+  }
+}
+/* ====== FIX: logo + menu-toggle na MESMA LINHA (mobile) ====== */
+@media (max-width: 768px){
+
+  .header-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap !important;     /* não deixa quebrar linha */
+    gap: 12px;
+  }
+
+  /* garante que a logo não ocupe a linha inteira */
+  .brand{
+    display: flex;
+    align-items: center;
+    flex: 0 1 auto;                  /* não “estica” */
+    max-width: calc(100% - 56px);    /* reserva espaço pro ícone */
+  }
+
+  /* limita tamanho do logo pra caber junto do ☰ */
+  .brand-logo{
+    height: 36px;       /* ajuste fino: 32–40 fica bom */
+    width: auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  /* botão ☰ fixo na direita (mesma linha) */
+  .menu-toggle{
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;       /* não encolhe nem cresce */
+    margin-left: auto;    /* empurra pra direita */
+  }
+
+  /* se o nav estiver dando layout estranho, garanta que no mobile ele não "empurre" */
+  .nav{
+    margin: 0;
+  }
+}
+@media (max-width: 768px){
+  .site-header .brand{ width: auto !important; }
+  .site-header .header-inner{ display:flex !important; }
+}
+
+/* ================================
+   HOTFIX DEFINITIVO — HEADER MOBILE
+   Mantém logo + ☰ na MESMA LINHA
+   e não deixa o @media 640px empilhar
+================================ */
+@media (max-width: 768px){
+
+  /* desfaz qualquer "column" antigo */
+  .header-inner{
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* logo volta ao tamanho normal, sem ficar minúscula */
+  .brand-logo{
+    height: 70px !important;   /* ajuste fino: 65–80 */
+    width: auto !important;
+  }
+
+  /* botão sempre na direita */
+  .menu-toggle{
+    display: inline-flex !important;
+    margin-left: auto !important;
+    flex: 0 0 auto !important;
+  }
+}
+
+/* ================================
+   AVALIAÇÕES – AJUSTE DE RESPIRO (MOBILE)
+================================ */
+.avaliacoes .container{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* melhora leitura no celular */
+.avaliacoes-texto{
+  max-width: 520px;
+  margin: 0 auto 18px auto;
+  line-height: 1.6;
+  opacity: 0.92;
+}
+
+/* reforço extra apenas no mobile */
+@media (max-width: 768px){
+  .avaliacoes .container{
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .avaliacoes h2{
+    margin-bottom: 12px;
+  }
+}
+
+/* ================================
+   LIGHTBOX (com galeria)
+================================ */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 99999;
+}
+
+.lightbox.is-open{ display: block; }
+
+.lightbox-backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.78);
+}
+
+.lightbox-content{
+  position: relative;
+  width: min(92vw, 980px);
+  height: min(86vh, 720px);
+  margin: 6vh auto;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(10,10,10,.65);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+
+.lightbox-content img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.lightbox-close{
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  font-size: 26px;
+  line-height: 42px;
+}
+
+.lightbox-nav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  font-size: 28px;
+  line-height: 46px;
+}
+
+.lightbox-prev{ left: 12px; }
+.lightbox-next{ right: 12px; }
+
+.lightbox-nav:hover,
+.lightbox-close:hover{
+  background: rgba(0,0,0,.75);
+}
+
+.gallery-item{ display: none; }
