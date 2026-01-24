@@ -23,19 +23,30 @@
 
 <body>
 
+ <!-- ==========================================
+    CABEÇALHO FIXO (menu que fica visível no topo)
+    - Logo + navegação principal
+  =========================================== -->
   <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Novo Sol Colchões - Início">
-        <img src="logo.png" alt="Novo Sol Colchões" class="brand-logo" />
-      </a>
+  <div class="header-inner">
 
-      <nav class="nav" aria-label="Menu principal">
-        <a href="index.html" class="nav-link">Início</a>
-        <a href="produtos.html" class="nav-link">Produtos e Serviços</a>
-        <a href="contato.html" class="nav-link">Contato</a>
-      </nav>
-    </div>
-  </header>
+    <a class="brand" href="index.html" aria-label="Novo Sol Colchões - Início">
+      <img src="logo.png" alt="Novo Sol Colchões" class="brand-logo" />
+    </a>
+
+    <!-- BOTÃO MOBILE -->
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav" aria-label="Menu principal">
+      <a href="index.html" class="nav-link">Início</a>
+      <a href="produtos.html" class="nav-link">Produtos e Serviços</a>
+      <a href="contato.html" class="nav-link">Contato</a>
+    </nav>
+
+  </div>
+</header>
 
   <section class="hero" style="
     min-height: 55vh;

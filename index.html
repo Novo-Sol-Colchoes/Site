@@ -12,7 +12,7 @@
   <!-- ================================
     TÍTULO DA PÁGINA (aparece no Google e na aba do navegador)
   ================================= -->
-  <title>Novo Sol Colchões | Conforto, Qualidade e Bem-Estar</title>
+  <title>Fábrica Novo Sol Colchões | Conforto, Qualidade e Bem-Estar</title>
 
   <!-- ================================
     CSS (arquivo principal de estilos do site)
@@ -23,9 +23,9 @@
     SEO (ajuda o Google a entender e indexar a página)
   ================================= -->
   <meta name="description"
-    content="Novo Sol Colchões em São José dos Pinhais. Colchões de qualidade, conforto e bem-estar para noites de sono mais tranquilas. Fale conosco pelo WhatsApp.">
+    content="Fábrica Novo Sol Colchões em São José dos Pinhais. Colchões de qualidade, conforto e bem-estar para noites de sono mais tranquilas. Fale conosco pelo WhatsApp.">
   <meta name="keywords"
-    content="colchões, colchão casal, colchão solteiro, colchão queen, colchão king, novo sol colchões, colchões São José dos Pinhais">
+    content="colchões, colchão casal, colchão solteiro, colchão queen, colchão king, fábrica novo sol colchões, novo sol colchões, colchões São José dos Pinhais">
   <meta name="robots" content="index, follow">
 
   <!-- Canonical (versão preferencial/oficial da página para evitar duplicidade no Google) -->
@@ -33,17 +33,34 @@
 
   <!-- ================================
     OPEN GRAPH / WHATSAPP
-    (define o “preview bonito” quando alguém compartilha o link)
+    (define o “preview” ao compartilhar o link)
   ================================= -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Novo Sol Colchões | Conforto e Qualidade para o Seu Sono">
-  <meta property="og:description"
-    content="Colchões de qualidade em São José dos Pinhais. Conforto, bem-estar e noites de sono perfeitas.">
-  <meta property="og:url" content="https://novosolcolchoes.com.br/">
-  <meta property="og:image" content="https://novosolcolchoes.com.br/logo.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Fábrica Novo Sol Colchões">
   <meta property="og:locale" content="pt_BR">
+
+  <meta property="og:title" content="Fábrica Novo Sol Colchões">
+  <meta property="og:description"
+    content="Colchões de qualidade em São José dos Pinhais. Conforto, bem-estar e o colchão ideal para o seu estilo de vida.">
+  <meta property="og:url" content="https://novosolcolchoes.com.br/">
+
+  <!-- Use a logo como imagem do preview -->
+  <meta property="og:image" content="https://novosolcolchoes.com.br/logo.png">
+  <meta property="og:image:secure_url" content="https://novosolcolchoes.com.br/logo.png">
+  <meta property="og:image:alt" content="Logo - Fábrica Novo Sol Colchões">
+
+  <!-- Se você não souber o tamanho real da logo, pode REMOVER as 2 linhas abaixo -->
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+
+  <!-- ================================
+    TWITTER CARD (ajuda em várias plataformas)
+  ================================= -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Fábrica Novo Sol Colchões">
+  <meta name="twitter:description"
+    content="Colchões de qualidade em São José dos Pinhais. Atendimento via WhatsApp.">
+  <meta name="twitter:image" content="https://novosolcolchoes.com.br/logo.png">
 </head>
 
 <body>
@@ -323,8 +340,7 @@
       }
     })();
 
-    // clique abre no lightbox existente (o seu script.js já cuida disso)
-    // se seu script.js não abrir por href="#", garantimos o href real:
+    // garante href real do link (pra abrir no lightbox)
     (async function fixLinks() {
       const links = document.querySelectorAll('a[data-lightbox="true"][data-srcbase]');
       for (const a of links) {
