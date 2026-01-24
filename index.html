@@ -2,85 +2,93 @@
 <html lang="pt-BR">
 
 <head>
-  <!-- ================================
-    CONFIGURAÇÕES BÁSICAS DO DOCUMENTO
-    (idioma, charset, responsividade)
-  ================================= -->
+  <!-- =========================================
+    CONFIGURAÇÕES BÁSICAS
+    - Charset e viewport para responsividade
+  ========================================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ================================
-    TÍTULO DA PÁGINA (aparece no Google e na aba do navegador)
-  ================================= -->
+  <!-- =========================================
+    TÍTULO (aba do navegador / resultados Google)
+  ========================================== -->
   <title>Fábrica Novo Sol Colchões | Conforto, Qualidade e Bem-Estar</title>
 
-  <!-- ================================
-    CSS (arquivo principal de estilos do site)
-  ================================= -->
+  <!-- =========================================
+    CSS PRINCIPAL DO SITE
+    - Estilos globais (layout, header, botões, etc.)
+  ========================================== -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- ================================
-    SEO (ajuda o Google a entender e indexar a página)
-  ================================= -->
+  <!-- =========================================
+    SEO
+    - description: resumo do site no Google
+    - keywords: palavras-chave de busca
+  ========================================== -->
   <meta name="description"
-    content="Fábrica Novo Sol Colchões em São José dos Pinhais. Colchões de qualidade, conforto e bem-estar para noites de sono mais tranquilas. Fale conosco pelo WhatsApp.">
+    content="Fábrica Novo Sol Colchões em São José dos Pinhais (PR). Fabricação própria, conforto e qualidade para noites de sono mais tranquilas. Atendimento via WhatsApp." />
+
   <meta name="keywords"
-    content="colchões, colchão casal, colchão solteiro, colchão queen, colchão king, fábrica novo sol colchões, novo sol colchões, colchões São José dos Pinhais">
+    content="fábrica de colchões, fabricação de colchões, colchão direto da fábrica, colchões São José dos Pinhais, colchão casal, colchão solteiro, colchão queen, colchão king, fábrica novo sol colchões, novo sol colchões" />
+
+  <!-- Permite indexação normal pelos robôs -->
   <meta name="robots" content="index, follow">
 
-  <!-- Canonical (versão preferencial/oficial da página para evitar duplicidade no Google) -->
+  <!-- URL canônica (evita duplicidade para o Google) -->
   <link rel="canonical" href="https://novosolcolchoes.com.br/">
 
-  <!-- ================================
-    OPEN GRAPH / WHATSAPP
-    (define o “preview” ao compartilhar o link)
-  ================================= -->
+  <!-- =========================================
+    OPEN GRAPH / WHATSAPP / FACEBOOK
+    - Controla o preview do link quando compartilha
+  ========================================== -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fábrica Novo Sol Colchões">
   <meta property="og:locale" content="pt_BR">
 
+  <!-- Título e descrição do preview -->
   <meta property="og:title" content="Fábrica Novo Sol Colchões">
   <meta property="og:description"
-    content="Colchões de qualidade em São José dos Pinhais. Conforto, bem-estar e o colchão ideal para o seu estilo de vida.">
+    content="Fabricação própria em São José dos Pinhais (PR). Conforto, qualidade e o colchão ideal para o seu estilo de vida.">
   <meta property="og:url" content="https://novosolcolchoes.com.br/">
 
-  <!-- Use a logo como imagem do preview -->
+  <!-- Imagem do preview (logo) -->
   <meta property="og:image" content="https://novosolcolchoes.com.br/logo.png">
   <meta property="og:image:secure_url" content="https://novosolcolchoes.com.br/logo.png">
   <meta property="og:image:alt" content="Logo - Fábrica Novo Sol Colchões">
-
-  <!-- Se você não souber o tamanho real da logo, pode REMOVER as 2 linhas abaixo -->
   <meta property="og:image:width" content="512">
   <meta property="og:image:height" content="512">
 
-  <!-- ================================
-    TWITTER CARD (ajuda em várias plataformas)
-  ================================= -->
+  <!-- =========================================
+    TWITTER CARD
+    - Também ajuda em plataformas que usam Twitter Cards
+  ========================================== -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Fábrica Novo Sol Colchões">
   <meta name="twitter:description"
-    content="Colchões de qualidade em São José dos Pinhais. Atendimento via WhatsApp.">
+    content="Fabricação própria em São José dos Pinhais (PR). Atendimento via WhatsApp.">
   <meta name="twitter:image" content="https://novosolcolchoes.com.br/logo.png">
 </head>
 
 <body>
 
-  <!-- ==========================================
-    CABEÇALHO FIXO (menu que fica visível no topo)
-    - Logo + navegação principal
-  =========================================== -->
+  <!-- =========================================
+    HEADER FIXO (Menu)
+    - Logo + botão mobile + links de navegação
+  ========================================== -->
   <header class="site-header">
     <div class="header-inner">
 
+      <!-- Logo clicável (volta para o início) -->
       <a class="brand" href="index.html" aria-label="Novo Sol Colchões - Início">
         <img src="logo.png" alt="Novo Sol Colchões" class="brand-logo" />
       </a>
 
-      <!-- BOTÃO MOBILE -->
+      <!-- Botão do menu mobile (abre/fecha) -->
       <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
         ☰
       </button>
 
+      <!-- Navegação principal -->
       <nav class="nav" aria-label="Menu principal">
         <a href="index.html" class="nav-link">Início</a>
         <a href="produtos.html" class="nav-link">Produtos e Serviços</a>
@@ -90,17 +98,27 @@
     </div>
   </header>
 
-  <!-- ==========================================
-    HERO (área visual no topo da página)
-    - Parte “acima da dobra” (visível sem rolar)
-    - Mensagem principal + botão de ação (WhatsApp)
-  =========================================== -->
+  <!-- =========================================
+    HERO / CAPA
+    - Frase principal + CTA WhatsApp
+  ========================================== -->
   <div class="hero">
     <div class="hero-content">
       <h1>Novo Sol Colchões</h1>
-      <p>Conforto, qualidade e o colchão ideal para o seu estilo de vida.</p>
 
-      <!-- CTA (Call To Action) - botão principal -->
+      <!-- Texto principal (reforça fabricação própria) -->
+      <p>
+        Fabricação própria, conforto e qualidade — o colchão ideal para o seu estilo de vida.
+      </p>
+
+      <!-- Frase “genérica” de experiência
+           - Não atribui idade à empresa atual
+           - Reforça know-how do proprietário/setor -->
+      <p style="margin-top:10px; opacity:.95; font-size:1rem;">
+        Experiência consolidada no setor • mais de 15 anos de know-how em colchões
+      </p>
+
+      <!-- CTA WhatsApp (com mensagem pronta) -->
       <a class="btn"
         href="https://wa.me/5541999064248?text=Eu%20vi%20seu%20contato%20no%20site%20e%20quero%20saber%20do%20pre%C3%A7o."
         target="_blank" rel="noopener">
@@ -109,24 +127,25 @@
     </div>
   </div>
 
-  <!-- ==========================================
-    SOBRE / MVV (Missão, Visão e Valores)
-    - Bloco institucional com slider (navegação por setas e dots)
-  =========================================== -->
+  <!-- =========================================
+    SEÇÃO: MISSÃO / VISÃO / VALORES
+    - Slider controlado pelo script.js
+    - Botões prev/next e dots
+  ========================================== -->
   <section class="sobre">
     <div class="container reveal">
       <h2>Missão, Visão e Valores</h2>
 
       <div class="mvv" aria-label="Missão, Visão e Valores">
 
-        <!-- Botão anterior do slider -->
+        <!-- Navegação do slider -->
         <button class="mvv-btn prev" type="button" aria-label="Anterior">‹</button>
 
         <!-- Área visível do slider -->
         <div class="mvv-viewport">
           <div class="mvv-track">
 
-            <!-- Slide: MISSÃO -->
+            <!-- Slide 1 -->
             <article class="mvv-slide">
               <h3>MISSÃO</h3>
               <p>
@@ -135,7 +154,7 @@
               </p>
             </article>
 
-            <!-- Slide: VISÃO -->
+            <!-- Slide 2 -->
             <article class="mvv-slide">
               <h3>VISÃO</h3>
               <p>
@@ -144,7 +163,7 @@
               </p>
             </article>
 
-            <!-- Slide: VALORES -->
+            <!-- Slide 3 -->
             <article class="mvv-slide">
               <h3>VALORES</h3>
               <ul>
@@ -159,10 +178,10 @@
           </div>
         </div>
 
-        <!-- Botão próximo do slider -->
+        <!-- Próximo slide -->
         <button class="mvv-btn next" type="button" aria-label="Próximo">›</button>
 
-        <!-- “Dots” do slider -->
+        <!-- Dots do slider -->
         <div class="mvv-dots" aria-label="Navegação do slider">
           <button class="dot is-active" type="button" aria-label="Ir para Missão"></button>
           <button class="dot" type="button" aria-label="Ir para Visão"></button>
@@ -173,17 +192,19 @@
     </div>
   </section>
 
-  <!-- ==========================================
-    PRODUTOS (resumo dos principais tipos)
-    - AGORA: apenas a imagem do colchão magnético 01
-  =========================================== -->
+  <!-- =========================================
+    SEÇÃO: PRODUTOS (Home)
+    - Apenas 1 imagem central (colchao-magnetico-01)
+    - O src é resolvido automaticamente pelo JS no final
+  ========================================== -->
   <section>
     <div class="container">
       <h2 class="reveal">Variedades de Produtos e Serviços de qualidade</h2>
 
-      <!-- apenas a imagem (central) -->
+      <!-- Grid com 1 coluna (centralizado) -->
       <div class="produtos" style="grid-template-columns: 1fr; justify-items:center;">
 
+        <!-- Link abre no lightbox (href será corrigido via JS fixLinks()) -->
         <a class="review-img-link"
           href="#"
           data-lightbox="true"
@@ -191,6 +212,7 @@
           aria-label="Abrir imagem do Colchão Magnético - foto 01"
           data-analytics-id="img_colchao_magnetico_01">
 
+          <!-- Imagem usa data-srcbase e recebe src final via JS fillImages() -->
           <img class="review-img"
             data-srcbase="colchao-magnetico-01"
             alt="Detalhes do colchão magnético - foto 01"
@@ -201,9 +223,11 @@
     </div>
   </section>
 
-  <!-- ==========================================
-    AVALIAÇÕES DO GOOGLE (resumo na Home)
-  =========================================== -->
+  <!-- =========================================
+    SEÇÃO: AVALIAÇÕES DO GOOGLE
+    - Nota + duas avaliações reais
+    - Abrem no lightbox
+  ========================================== -->
   <section class="avaliacoes">
     <div class="container reveal">
       <h2>Avaliações no Google</h2>
@@ -213,6 +237,7 @@
         Confira avaliações reais de quem já comprou com a Novo Sol Colchões.
       </p>
 
+      <!-- Nota (print) -->
       <a class="review-img-link"
         href="reviews-rating.png"
         data-lightbox="true"
@@ -224,6 +249,7 @@
           loading="lazy" />
       </a>
 
+      <!-- Duas avaliações -->
       <div class="review-grid" aria-label="Avaliações recentes">
         <a class="review-img-link"
           href="review-laiana.png"
@@ -248,6 +274,7 @@
         </a>
       </div>
 
+      <!-- CTA para página de comentários no Google -->
       <a class="btn"
         href="https://www.google.com/search?sca_esv=38663ec9571eddc2&rlz=1C1GCEA_enBR1154BR1154&sxsrf=ANbL-n4AQfsipv5nAzrlb2X7vABCk8oV2g:1769275297954&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOdpZFsrO8Y9BykUiKa1sCWwZjsDpwEcOibkUpDXDDaCarolClEflP3oRe22_LUeXmb3pXYdTfLucXaWjtMtmyPr7HrpPfmd9z5yIrR_wTRtnXo9FqA%3D%3D&q=Novo+Sol+Colch%C3%B5es+Coment%C3%A1rios&sa=X&ved=2ahUKEwimzpON2KSSAxVJqJUCHWQqC-cQ0bkNegQIMRAH&biw=1536&bih=703&dpr=1.25&aic=0"
         target="_blank"
@@ -259,9 +286,10 @@
     </div>
   </section>
 
-  <!-- ==========================================
-    CONTATO
-  =========================================== -->
+  <!-- =========================================
+    SEÇÃO: CONTATO (Home)
+    - Endereço, telefone, e-mail e CTA WhatsApp
+  ========================================== -->
   <section class="contato">
     <div class="container reveal">
       <h2>Contato</h2>
@@ -279,23 +307,29 @@
     </div>
   </section>
 
-  <!-- ==========================================
+  <!-- =========================================
     RODAPÉ
-  =========================================== -->
+  ========================================== -->
   <footer>
     © 2026 – Novo Sol Colchões - CNPJ: 51.841.611/0001-01 • Todos os direitos reservados
   </footer>
 
-  <!-- ==========================================
-    JAVASCRIPT
-  =========================================== -->
+  <!-- =========================================
+    SCRIPT PRINCIPAL
+    - menu mobile
+    - animações reveal
+    - slider MVV
+    - lightbox (seu padrão)
+  ========================================== -->
   <script src="script.js"></script>
 
+  <!-- =========================================
+    SCRIPT AUXILIAR (HOME)
+    - Resolve automaticamente a extensão real da imagem
+    - Ex: colchao-magnetico-01.png / .jpg / .jpeg / .webp
+    - Preenche o src do <img> e o href do <a> para o lightbox abrir certo
+  ========================================== -->
   <script>
-    /* =========================================================
-      RESOLVER IMAGEM AUTOMÁTICA POR EXTENSÃO (HOME)
-      - usa data-srcbase="colchao-magnetico-01"
-    ========================================================= */
     const IMG_EXTS = ["png", "jpg", "jpeg", "webp"];
     const resolvedCache = new Map();
 
@@ -330,7 +364,7 @@
       return null;
     }
 
-    // preenche src das imagens da home via data-srcbase
+    // Preenche src das imagens via data-srcbase
     (async function fillImages() {
       const imgs = document.querySelectorAll("img[data-srcbase]");
       for (const img of imgs) {
@@ -340,7 +374,7 @@
       }
     })();
 
-    // garante href real do link (pra abrir no lightbox)
+    // Ajusta href dos links para o lightbox abrir corretamente
     (async function fixLinks() {
       const links = document.querySelectorAll('a[data-lightbox="true"][data-srcbase]');
       for (const a of links) {
