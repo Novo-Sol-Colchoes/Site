@@ -36,6 +36,20 @@
   line-height: 1.5;
 }
 
+/* altura do header fixo (ajuste se mudar no futuro) */
+:root{
+  --header-h: 55px; /* use o mesmo valor do header */
+}
+
+/* HERO com vídeo */
+.hero.hero-video{
+  position: relative;
+  min-height: calc(55vh + var(--header-h));
+  padding-top: var(--header-h);
+  overflow: hidden;
+}
+
+
 /* Botão preço (CTA) */
 .btn-cotar {
   display: inline-block;
@@ -175,4 +189,71 @@
   .produto-img { height: 190px; }
   .lightbox-content { margin: 4vh auto 0; }
   .lightbox-content img { max-height: 72vh; }
+}
+
+/* HERO com vídeo */
+.hero.hero-video{
+  position: relative;
+  min-height: 100vh;          /* AUMENTA a faixa da capa (tente 85vh ou 90vh) */
+  padding-top: var(--header-h);
+  overflow: hidden;
+  background: #000;          /* se sobrar faixa, fica bonito e limpo */
+}
+
+.hero-bg-video{
+  position: absolute;
+  top: var(--header-h);
+  left: 0;
+  width: 100%;
+  height: calc(100% - var(--header-h));
+  object-fit: contain;       /* <<< NÃO CORTA */
+  object-position: center;
+  z-index: 0;
+
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.hero-bg-video.is-ready{ opacity: 1; }
+
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  z-index: 1;
+}
+
+.hero-content{
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ===== HERO maior (faixa da capa) ===== */
+.hero.hero-video{
+  position: relative;
+  min-height: 100vh;            /* AUMENTA a faixa do hero (antes ~55vh) */
+  padding-top: var(--header-h);
+  overflow: hidden;
+}
+
+/* vídeo */
+.hero-bg-video{
+  position: absolute;
+  top: var(--header-h);
+  left: 0;
+  width: 100%;
+  height: calc(100% - var(--header-h));
+  object-fit: cover;
+  object-position: center 20%;
+  z-index: 0;
+
+  /* fade */
+  opacity: 0;
+  transition: opacity 1.2s ease; /* duração do fade */
+}
+
+/* quando o vídeo estiver pronto */
+.hero-bg-video.is-ready{
+  opacity: 1;
 }

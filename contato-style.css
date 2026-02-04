@@ -30,7 +30,7 @@
      - 55vh = 55% da altura da tela
      - - var(--header-h) evita a capa “ficar escondida” atrás do header fixo
      Obs: var(--header-h) precisa existir no style.css (global) */
-  min-height: calc(55vh - var(--header-h));
+  min-height: calc(80vh - var(--header-h));
 
   /* Centralização do conteúdo (h1 e p) no meio da capa */
   display: flex;             /* ativa flexbox */

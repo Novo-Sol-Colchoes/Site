@@ -28,44 +28,41 @@
     - Logo + navegação principal
   =========================================== -->
   <header class="site-header">
-  <div class="header-inner">
+    <div class="header-inner">
 
-    <a class="brand" href="index.html" aria-label="Novo Sol Colchões - Início">
-      <img src="logo.png" alt="Novo Sol Colchões" class="brand-logo" />
-    </a>
-
-    <!-- BOTÃO MOBILE -->
-    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
-      ☰
-    </button>
-
-    <nav class="nav" aria-label="Menu principal">
-      <a href="index.html" class="nav-link">Início</a>
-      <a href="produtos.html" class="nav-link">Produtos e Serviços</a>
-      <a href="contato.html" class="nav-link">Contato</a>
-    </nav>
-
-  </div>
-</header>
-
-  <section class="hero" style="
-    min-height: 55vh;
-    background-image:
-      linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-      url('background-novo-sol.png');
-  ">
-    <div class="hero-content">
-      <h1>Nossos Produtos</h1>
-      <p>Opções para cada necessidade — e ajuda para você escolher o colchão ideal.</p>
-
-      <a class="btn"
-         href="https://wa.me/5541999064248"
-         target="_blank"
-         rel="noopener">
-        Falar no WhatsApp
+      <a class="brand" href="index.html" aria-label="Novo Sol Colchões - Início">
+        <img src="logo.png" alt="Novo Sol Colchões" class="brand-logo" />
       </a>
+
+      <!-- BOTÃO MOBILE -->
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav" aria-label="Menu principal">
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="produtos.html" class="nav-link">Produtos e Serviços</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+      </nav>
+
     </div>
-  </section>
+  </header>
+
+  <section class="hero hero-video">
+  <!-- VÍDEO DE FUNDO -->
+  <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="capa-cama-pet.jpg">
+    <source src="capa-cama-pet.mp4" type="video/mp4">
+  </video>
+
+  <!-- OVERLAY (escurece para o texto ficar legível) -->
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Nossos Produtos</h1>
+    <p>Opções para cada necessidade — e ajuda para você escolher o colchão ideal.</p>
+
+</section>
+
 
   <section>
     <div class="container">
@@ -74,10 +71,24 @@
 
       <div class="produtos">
 
-        <!-- 1) Colchão Solteiro (sem foto por enquanto) -->
+        <!-- 1) Colchão Solteiro
+             - PREFIXO: cama-solteiro-01...99 -->
         <div class="produto reveal">
           <h3>Colchão Solteiro</h3>
           <p>Ideal para quartos individuais, com conforto e durabilidade para o dia a dia.</p>
+
+          <!-- Imagem principal (abre galeria automática por prefixo) -->
+          <a href="#"
+             class="produto-img-link"
+             data-lightbox="true"
+             data-gallery="cama-solteiro"
+             data-gallery-prefix="cama-solteiro"
+             aria-label="Abrir fotos do Colchão Solteiro">
+            <img class="produto-img"
+                 data-gallery-prefix="cama-solteiro"
+                 alt="Colchão solteiro Novo Sol"
+                 loading="lazy">
+          </a>
 
           <a class="btn-cotar"
              href="https://wa.me/5541999064248?text=Eu%20vi%20o%20Colch%C3%A3o%20Solteiro%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
@@ -86,32 +97,22 @@
           </a>
         </div>
 
-        <!-- 2) Colchão Casal (galeria: cama-casal-01, cama-casal-02) -->
+        <!-- 2) Box de Baú
+             - PREFIXO: box-01...99 -->
         <div class="produto reveal" style="transition-delay:120ms;">
-          <h3>Colchão Casal</h3>
-          <p>Conforto equilibrado e suporte na medida certa para noites tranquilas a dois.</p>
+          <h3>Box de baú</h3>
+          <p>Base de cama com compartimento interno, ideal para guardar objetos e aproveitar melhor o espaço do quarto.</p>
 
-          <!-- Imagem principal (abre galeria) -->
           <a href="#"
              class="produto-img-link"
              data-lightbox="true"
-             data-gallery="cama-casal"
-             data-srcbase="cama-casal-01"
-             aria-label="Abrir fotos do Colchão Casal - foto 1">
+             data-gallery="box"
+             data-gallery-prefix="box"
+             aria-label="Abrir fotos do Colchão Casal">
             <img class="produto-img"
-                 data-srcbase="cama-casal-01"
-                 alt="Colchão casal Novo Sol - foto 1"
+                 data-gallery-prefix="box"
+                 alt="Colchão casal Novo Sol"
                  loading="lazy">
-          </a>
-
-          <!-- Itens extras da mesma galeria (não aparecem no card, só no lightbox) -->
-          <a href="#"
-             class="produto-img-link is-hidden"
-             data-lightbox="true"
-             data-gallery="cama-casal"
-             data-srcbase="cama-casal-02"
-             aria-label="Abrir fotos do Colchão Casal - foto 2">
-            <img data-srcbase="cama-casal-02" alt="Colchão casal Novo Sol - foto 2">
           </a>
 
           <a class="btn-cotar"
@@ -121,20 +122,21 @@
           </a>
         </div>
 
-        <!-- 3) Queen / King (galeria: cama-queen-01) -->
+        <!-- 3) Cama de casal Queen / King
+             - PREFIXOS (combo): cama-casal-01...99 + cama-casal-bau-01...99 -->
         <div class="produto reveal" style="transition-delay:240ms;">
-          <h3>Queen / King</h3>
+          <h3>Cama de casal Queen / King</h3>
           <p>Mais espaço e sofisticação para quem busca máximo conforto e bem-estar.</p>
 
           <a href="#"
              class="produto-img-link"
              data-lightbox="true"
              data-gallery="queen-king"
-             data-srcbase="cama-queen-01"
-             aria-label="Abrir foto do Colchão Queen/King - foto 1">
+             data-gallery-prefixes="cama-casal,cama-casal-bau"
+             aria-label="Abrir fotos do Queen / King">
             <img class="produto-img"
-                 data-srcbase="cama-queen-01"
-                 alt="Colchão Queen/King Novo Sol - foto 1"
+                 data-gallery-prefixes="cama-casal,cama-casal-bau"
+                 alt="Colchão Queen/King Novo Sol"
                  loading="lazy">
           </a>
 
@@ -145,7 +147,8 @@
           </a>
         </div>
 
-        <!-- 4) Cabeceira (galeria: cabeceira-01, cabeceira-02) -->
+        <!-- 4) Cabeceira
+             - PREFIXO: cabeceira-01...99 -->
         <div class="produto reveal" style="transition-delay:360ms;">
           <h3>Cabeceira de Cama</h3>
           <p>Modelos que complementam o ambiente, trazendo conforto, estilo e acabamento.</p>
@@ -154,21 +157,12 @@
              class="produto-img-link"
              data-lightbox="true"
              data-gallery="cabeceira"
-             data-srcbase="cabeceira-01"
-             aria-label="Abrir fotos de Cabeceira - foto 1">
+             data-gallery-prefix="cabeceira"
+             aria-label="Abrir fotos de Cabeceira">
             <img class="produto-img"
-                 data-srcbase="cabeceira-01"
-                 alt="Cabeceira Novo Sol - foto 1"
+                 data-gallery-prefix="cabeceira"
+                 alt="Cabeceira Novo Sol"
                  loading="lazy">
-          </a>
-
-          <a href="#"
-             class="produto-img-link is-hidden"
-             data-lightbox="true"
-             data-gallery="cabeceira"
-             data-srcbase="cabeceira-02"
-             aria-label="Abrir fotos de Cabeceira - foto 2">
-            <img data-srcbase="cabeceira-02" alt="Cabeceira Novo Sol - foto 2">
           </a>
 
           <a class="btn-cotar"
@@ -178,22 +172,23 @@
           </a>
         </div>
 
-        <!-- 5) Colchão Magnético (galeria: colchao-magnetico-01) -->
+        <!-- 5) Colchão Magnético (single)
+             - BASE fixa: colchao-magnetico-01 -->
         <div class="produto reveal" style="transition-delay:480ms;">
           <h3>Colchão Magnético</h3>
-          <p>Uma opção especial para quem busca mais conforto e bem-estar no descanso.</p>
+          <p>Colchão com tecnologia magnética, ideal para quem busca conforto e uma experiência de descanso diferenciada.</p>
 
           <a href="#"
-             class="produto-img-link"
-             data-lightbox="true"
-             data-gallery="colchao-magnetico"
-             data-srcbase="colchao-magnetico-01"
-             aria-label="Abrir foto do Colchão Magnético - foto 1">
-            <img class="produto-img"
-                 data-srcbase="colchao-magnetico-01"
-                 alt="Colchão Magnético Novo Sol - foto 1"
-                 loading="lazy">
-          </a>
+   class="produto-img-link"
+   data-lightbox="true"
+   data-gallery="colchao-magnetico"
+   data-gallery-prefix="colchao-magnetico"
+   aria-label="Abrir fotos do Colchão Magnético">
+  <img class="produto-img"
+       data-gallery-prefix="colchao-magnetico"
+       alt="Colchão Magnético Novo Sol"
+       loading="lazy">
+</a>
 
           <a class="btn-cotar"
              href="https://wa.me/5541999064248?text=Eu%20vi%20o%20Colch%C3%A3o%20Magn%C3%A9tico%20no%20site%20e%20quero%20ver%20o%20pre%C3%A7o."
@@ -202,7 +197,8 @@
           </a>
         </div>
 
-        <!-- 6) Cama Pet (galeria: cama-pet-01) -->
+        <!-- 6) Cama Pet (single)
+             - BASE fixa: cama-pet-01 -->
         <div class="produto reveal" style="transition-delay:600ms;">
           <h3>Cama para Pet</h3>
           <p>Conforto e descanso também para o seu pet, com opções pensadas para bem-estar.</p>
@@ -211,11 +207,11 @@
              class="produto-img-link"
              data-lightbox="true"
              data-gallery="cama-pet"
-             data-srcbase="cama-pet-01"
-             aria-label="Abrir foto da Cama para Pet - foto 1">
+             data-gallery-single="cama-pet-01"
+             aria-label="Abrir foto da Cama para Pet">
             <img class="produto-img"
-                 data-srcbase="cama-pet-01"
-                 alt="Cama para Pet Novo Sol - foto 1"
+                 data-gallery-single="cama-pet-01"
+                 alt="Cama para Pet Novo Sol"
                  loading="lazy">
           </a>
 
@@ -273,13 +269,13 @@
     </div>
   </div>
 
+  <!-- Seu JS base (menu mobile / reveal etc.) -->
   <script src="script.js"></script>
 
   <script>
     /* =========================================================
       RESOLVER IMAGEM AUTOMÁTICA POR EXTENSÃO
-      - você passa só "base" (ex: cama-casal-01)
-      - o JS tenta .png, .jpg, .jpeg, .webp
+      - tenta .png, .jpg, .jpeg, .webp
     ========================================================= */
     const IMG_EXTS = ["png", "jpg", "jpeg", "webp"];
     const resolvedCache = new Map();
@@ -297,7 +293,6 @@
       if (!base) return null;
       if (resolvedCache.has(base)) return resolvedCache.get(base);
 
-      // tenta com e sem "./" (ajuda em alguns cenários)
       const candidates = [];
       IMG_EXTS.forEach(ext => {
         candidates.push(`${base}.${ext}`);
@@ -317,20 +312,83 @@
     }
 
     /* =========================================================
-      PREENCHE SRC DAS IMAGENS DO CARD AUTOMATICAMENTE
+      GALERIA AUTOMÁTICA POR PREFIXO
+      - ex: "cama-casal" -> tenta cama-casal-01..99
+      - para combos: "cama-casal,cama-casal-bau"
+      - para single: base fixa "colchao-magnetico-01"
+      - para parar: após encontrar imagens, se tiver N falhas seguidas, encerra
+    ========================================================= */
+    const pad2 = (n) => String(n).padStart(2, "0");
+
+    async function buildGalleryFromPrefixes(prefixes, max = 99, stopAfterMisses = 5) {
+      const list = [];
+      for (const prefix of prefixes) {
+        let missesInRow = 0;
+        let foundAnyForThisPrefix = false;
+
+        for (let i = 1; i <= max; i++) {
+          const base = `${prefix}-${pad2(i)}`;
+          const url = await resolveByBase(base);
+
+          if (url) {
+            list.push({ base, url });
+            foundAnyForThisPrefix = true;
+            missesInRow = 0;
+          } else {
+            if (foundAnyForThisPrefix) {
+              missesInRow++;
+              if (missesInRow >= stopAfterMisses) break;
+            }
+          }
+        }
+      }
+      return list;
+    }
+
+    async function getFirstImageForPrefix(prefixOrPrefixes) {
+      const prefixes = (prefixOrPrefixes || "")
+        .split(",")
+        .map(s => s.trim())
+        .filter(Boolean);
+
+      if (!prefixes.length) return null;
+
+      // tenta o -01 do primeiro prefixo
+      const base01 = `${prefixes[0]}-01`;
+      const url01 = await resolveByBase(base01);
+      if (url01) return { base: base01, url: url01 };
+
+      // fallback: varre até achar a primeira
+      const list = await buildGalleryFromPrefixes(prefixes, 99, 10);
+      return list.length ? list[0] : null;
+    }
+
+    /* =========================================================
+      PREENCHE SRC DAS IMAGENS DOS CARDS AUTOMATICAMENTE
+      - por data-gallery-prefix / data-gallery-prefixes / data-gallery-single
     ========================================================= */
     (async function fillCardImages() {
-      const imgs = document.querySelectorAll("img[data-srcbase]");
+      const imgs = document.querySelectorAll("img.produto-img");
+
       for (const img of imgs) {
-        const base = img.getAttribute("data-srcbase");
-        const url = await resolveByBase(base);
-        if (url) img.src = url;
+        const single = img.getAttribute("data-gallery-single");
+        const prefixes = img.getAttribute("data-gallery-prefixes");
+        const prefix = img.getAttribute("data-gallery-prefix");
+
+        if (single) {
+          const url = await resolveByBase(single);
+          if (url) img.src = url;
+          continue;
+        }
+
+        const first = await getFirstImageForPrefix(prefixes || prefix);
+        if (first?.url) img.src = first.url;
       }
     })();
 
     /* =========================================================
-      LIGHTBOX + GALERIA (passar imagens)
-      - abre todas da mesma data-gallery
+      LIGHTBOX + GALERIA (automática)
+      - abre todas da mesma galeria
       - setas e teclado
     ========================================================= */
     (function () {
@@ -407,31 +465,47 @@
         a.addEventListener("click", async (e) => {
           e.preventDefault();
 
-          const gallery = a.getAttribute("data-gallery") || "__single__";
+          const single = a.getAttribute("data-gallery-single");
+          const prefixesAttr = a.getAttribute("data-gallery-prefixes");
+          const prefixAttr = a.getAttribute("data-gallery-prefix");
 
-          // pega todos os links da mesma galeria
-          const nodes = Array.from(document.querySelectorAll(
-            `[data-lightbox="true"][data-gallery="${gallery}"]`
-          ));
+          // legenda: tenta alt da imagem dentro do card
+          const img = a.querySelector("img");
+          const baseAlt = (img && img.alt) ? img.alt : (a.getAttribute("aria-label") || "Imagem do produto");
 
-          const list = nodes.map((el) => {
-            const img = el.querySelector("img");
-            return {
-              base: el.getAttribute("data-srcbase") || (img ? img.getAttribute("data-srcbase") : ""),
-              alt: (img && img.alt) ? img.alt : (el.getAttribute("aria-label") || "Imagem do produto"),
-              url: null
-            };
-          });
+          let list = [];
 
-          // resolve o índice clicado
-          const clickedBase = a.getAttribute("data-srcbase") || (a.querySelector("img")?.getAttribute("data-srcbase") || "");
-          const startIndex = Math.max(0, list.findIndex(x => x.base === clickedBase));
+          if (single) {
+            const url = await resolveByBase(single);
+            if (url) list = [{ base: single, url, alt: baseAlt }];
+            else list = [{ base: single, url: null, alt: baseAlt }];
+          } else {
+            const prefixes = (prefixesAttr || prefixAttr || "")
+              .split(",")
+              .map(s => s.trim())
+              .filter(Boolean);
 
-          openLightbox(list, startIndex);
+            const built = await buildGalleryFromPrefixes(prefixes, 99, 5);
+
+            // aplica alt padrão por item (fica simples, mas funciona)
+            list = built.map((it, idx) => ({
+              base: it.base,
+              url: it.url,
+              alt: (idx === 0 ? baseAlt : baseAlt)
+            }));
+
+            // fallback (se não achou nada)
+            if (!list.length) {
+              list = [{ base: prefixes[0] ? `${prefixes[0]}-01` : "", url: null, alt: "Imagem não encontrada" }];
+            }
+          }
+
+          // sempre abre no primeiro item (mais simples e previsível)
+          openLightbox(list, 0);
         });
       });
 
-      // fechar no backdrop / botao
+      // fechar no backdrop / botão
       lb.addEventListener("click", (e) => {
         if (e.target && e.target.getAttribute("data-lightbox-close") === "true") closeLightbox();
       });
@@ -448,6 +522,25 @@
       });
     })();
   </script>
+
+<script>
+  // Fade suave quando o vídeo realmente estiver pronto
+  (function(){
+    const v = document.querySelector('.hero-bg-video');
+    if(!v) return;
+
+    // quando já tiver dados suficientes para tocar
+    const makeReady = () => v.classList.add('is-ready');
+
+    if (v.readyState >= 3) {
+      // já tem dados
+      makeReady();
+    } else {
+      v.addEventListener('canplay', makeReady, { once: true });
+      v.addEventListener('loadeddata', makeReady, { once: true });
+    }
+  })();
+</script>
 
 </body>
 </html>
